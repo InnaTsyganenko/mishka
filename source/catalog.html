@@ -13,15 +13,15 @@
         <img src="img/logotype-mobile.svg" width="86" height="35" alt="Интернет-магазин «Мишка»">
       </a>
       <nav class="main-nav">
-      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-      <div class="main-nav__wrapper">
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active">
-            <a href="#">Каталог товаров</a>
-          </li>
-          <li class="site-list__item">
-            <a href="form.html">Вязание на заказ</a>
-          </li>
+            <li class="site-list__item site-list__item--active">
+              <a href="#">Каталог товаров</a>
+            </li>
+            <li class="site-list__item">
+              <a href="form.html">Вязание на заказ</a>
+            </li>
           </ul>
           <a class="search" href="#">Поиск по сайту</a>
           <div class="main-nav__list cart-list">
@@ -36,53 +36,44 @@
         <h2 class="catalog__caption">Каталог товаров</h2>
         <ul class="catalog__list">
           <li class="catalog__item">
-            <h3 class="catalog__title">Зайчик-попрыгайчик</h3>
             <a class="details-about-bunny" href="#">
-              <div class="product-wrapper">
-                <img class="catalog__img" src="img/bunny.jpg" width="260" height="195" alt="Вязаный зайчик в голубом костюме">
-                <p class="catalog__description">Рост 30 см, вес 200 г</p>
-              </div>
+              <h3 class="catalog__title">Зайчик-попрыгайчик</h3>
+              <img class="catalog__img" src="img/bunny.jpg" width="260" height="195" alt="Вязаный зайчик в голубом костюме">
             </a>
+            <p class="catalog__description">Рост 30 см, вес 200 г</p>
             <p class="catalog__price">1 200 руб.</p>
             <button class="catalog__basket-button" type="button" aria-label="Добавить товар в корзину">
-            <!--здесь будет svg-->
+              <!--здесь будет svg-->
             </button>
           </li>
           <li class="catalog-item">
-            <h3 class="catalog__title">Корзинка для белья</h3>
             <a class="details-about-small-laundry-basket" href="#">
-              <div class="product-wrapper">
-                <img class="catalog__img" src="img/small-laundry-basket.jpg" width="260" height="195" alt="Малая вязаная корзинка бело-оранжевая">
-                <p class="catalog__description">Диаметр 15 см, высота 10 см</p>
-              </div>
+              <h3 class="catalog__title">Корзинка для белья</h3>
+              <img class="catalog__img" src="img/small-laundry-basket.jpg" width="260" height="195" alt="Малая вязаная корзинка бело-оранжевая">
             </a>
+            <p class="catalog__description">Диаметр 15 см, высота 10 см</p>
             <p class="catalog__price">690 руб.</p>
             <button class="catalog__basket-button" type="button" aria-label="Добавить товар в корзину">
-            <!--здесь будет svg-->
+              <!--здесь будет svg-->
             </button>
           </li>
           <li class="catalog-item">
-            <h3 class="catalog__title">Большая корзинка для игрушек</h3>
             <a class="details-about-big-laundry-basket" href="#">
-              <div class="product-wrapper">
-                <img class="catalog__img" src="img/big-laundry-basket.jpg" width="260" height="195" alt="Большая вязаная корзинка бело-зелёная">
-                <p class="catalog__description">Диаметр 30 см, высота 30 см</p>
-              </div>
+              <h3 class="catalog__title">Большая корзинка для игрушек</h3>
+              <img class="catalog__img" src="img/big-laundry-basket.jpg" width="260" height="195" alt="Большая вязаная корзинка бело-зелёная">
             </a>
+            <p class="catalog__description">Диаметр 30 см, высота 30 см</p>
             <p class="catalog__price">1 500 руб.</p>
             <button class="catalog__basket-button" type="button" aria-label="Добавить товар в корзину">
-            <!--здесь будет svg-->
+              <!--здесь будет svg-->
             </button>
           </li>
         </ul>
         <article class="production-process">
           <h2 class="production-process__title">Процесс производства</h2>
-          <video class="production-process__video" poster="img/preview.jpg" width="260" height="150">
-            <source src="video.mp4" type="video/mp4">
-            <source src="video.ogv" type="video/ogg">
-            <source src="video.webm" type="video/webm">
-          </video>
-          <button class="production-process__play-button" type="button">Смотреть видео</button>
+          <div class="production-process__container">
+            <img class="production-process__poster" src="img/preview.jpg" width="260" height="150" alt="Постер для видео">
+          </div>
           <p class="production-process__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
         </article>
         <a class="catalog__button-making-order button" href="form.html">Сделать заказ</a>
@@ -110,9 +101,12 @@
     <section class="modal-select-size modal">
       <h2 class="modal-select-size modal__title">Добавить в корзину</h2>
       <p class="modal-select-size modal__text">Выберите размер:</p>
-      <button class="size-button size-button--active" type="button">S</button>
-      <button class="size-button" type="button">M</button>
-      <button class="size-button" type="button">L</button>
+      <input class="input-size input-size--active" id="input-size-s" type="radio" name="input-size" value="input-size-s">
+      <label class="label-size" for="input-size-s">S</label>
+      <input class="input-size" id="input-size-m" type="radio" name="input-size" value="input-size-m">
+      <label class="label-size" for="input-size-m">M</label>
+      <input class="input-size" id="input-size-l" type="radio" name="input-size" value="input-size-l">
+      <label class="label-size" for="input-size-l">L</label>
       <button class="add-button" type="button">Добавить</button>
     </section>
   </body>
