@@ -114,11 +114,14 @@
       </div>
     </footer>
     <section class="modal-select-size modal">
-      <h2 class="modal__title">Добавить в корзину</h2>
-      <p class="modal__text">Выберите размер:</p>
-      <button class="size-button" type="button">S</button>
-      <button class="size-button" type="button">M</button>
-      <button class="size-button" type="button">L</button>
+      <h2 class="modal-select-size modal__title">Добавить в корзину</h2>
+      <p class="modal-select-size modal__text">Выберите размер:</p>
+      <input class="input-size input-size--active" id="input-size-s" type="radio" name="input-size" value="input-size-s">
+      <label class="label-size" for="input-size-s">S</label>
+      <input class="input-size" id="input-size-m" type="radio" name="input-size" value="input-size-m">
+      <label class="label-size" for="input-size-m">M</label>
+      <input class="input-size" id="input-size-l" type="radio" name="input-size" value="input-size-l">
+      <label class="label-size" for="input-size-l">L</label>
       <button class="add-button" type="button">Добавить</button>
     </section>
   </body>
