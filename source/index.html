@@ -10,22 +10,22 @@
   <body class="page__body">
     <header class="page-header">
       <a class="page-header__logo">
-        <img src="img/logotype-mobile.svg" width="86" height="35" alt="Интернет-магазин «Мишка»">
+        <img class="page-header__img" src="img/logo-mobile.svg" width="86" height="35" alt="Интернет-магазин «Мишка»">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item site-list__item--active">
-              <a href="catalog.html">Каталог товаров</a>
+              <a class="site-list__link" href="catalog.html">Каталог товаров</a>
             </li>
             <li class="site-list__item">
-              <a href="form.html">Вязание на заказ</a>
+              <a class="site-list__link" href="form.html">Вязание на заказ</a>
             </li>
           </ul>
-          <a class="search" href="#">Поиск по сайту</a>
+          <a class="search-link" href="#">Поиск по сайту</a>
           <div class="main-nav__list cart-list">
-            <a class="cart-text" href="#">Корзина: <span class="items-count">пока пуста</span></a>
+            <a class="cart-link" href="#">Корзина: <span class="items-count">пока пуста</span></a>
           </div>
         </div>
       </nav>
@@ -33,10 +33,10 @@
     <main class="page-main">
       <h1 class="visually-hidden">Интернет-магазин «Мишка» - вещи ручной работы для дома</h1>
       <section class="promo promo-wrapper">
-        <h2>Милые штуки ручной работы для дома</h2>
+        <h2 class="promo__caption">Милые штуки<br>ручной<br>работы для дома</h2>
         <ul class="promo__list">
-          <li class="promo__item"><a class="promo__link">Предметы интерьера</a></li>
-          <li class="promo__item"><a class="promo__link">Детские игрушки</a></li>
+          <li class="promo__item"><a class="promo__link" href="#">Предметы интерьера</a></li>
+          <li class="promo__item"><a class="promo__link" href="#">Детские игрушки</a></li>
         </ul>
         <section class="promoted-product">
           <h2 class="promoted-product__title">Вязаные корзинки</h2>
@@ -50,13 +50,13 @@
             <dt class="promoted-product__characteristic-term">Высота:</dt>
             <dd class="promoted-product__characteristic-description">15 см</dd>
           </dl>
-          <img src="img/triple-set-mobile.png" width="260" height="315" alt="Фото товара: три вязаные корзинки в руках">
+          <img class="promoted-product__img" src="img/triple-set-mobile.png" width="260" height="315" alt="Фото товара: три вязаные корзинки в руках">
           <p class="promoted-product__price">Цена: 990 руб.</p>
           <button class="promoted-product__button-order button" type="button">Заказать</button>
         </section>
       </section>
       <section class="about about-wrapper">
-      <h2>Коротко о нас:</h2>
+      <h2 class="about__caption">Коротко о нас:</h2>
         <ul class="about__list">
           <li class="about__item about__item--eco">Экологически чистые материалы</li>
           <li class="about__item about__item--style">Скандинавский стиль по российской цене</li>
@@ -76,8 +76,8 @@
             </blockquote>
           </li>
         </ul>
-        <button class="reviews__button-back button" type="button">Предыдущий отзыв</button>
-        <button class="reviews__button-forth button" type="button">Следущий отзыв</button>
+        <button class="reviews__button-back" type="button"><span class="visually-hidden">Предыдущий отзыв</span></button>
+        <button class="reviews__button-forth" type="button"><span class="visually-hidden">Следущий отзыв</span></button>
         <a class="reviews__write button" href="form.html">Написать</a>
       </section>
     </main>
@@ -86,43 +86,46 @@
         <h2 class="contacts__title">Контакты</h2>
         <dl class="contacts__list">
           <dt class="contacts__term">e-mail:</dt>
-          <dd class="contacts__description">info@mimimishkashop.ru</dd>
+          <dd class="contacts__description contacts__e-mail">info@mimimishkashop.ru</dd>
           <dt class="contacts__term">адрес:</dt>
           <dd class="contacts__description">г. Санкт-Петербург, ул. Большая Конюшенная д. 19/8, офис 101</dd>
         </dl>
       </section>
       <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999.3103556902515!2d30.32282745744139!3d59.93843567075764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x62740c0ffcd8a91f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsIDEwMSwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5MTE4Ng!5e0!3m2!1sru!2sru!4v1605274996480!5m2!1sru!2sru" width="320" height="455"></iframe>
+        <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999.3103556902515!2d30.32282745744139!3d59.93843567075764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x62740c0ffcd8a91f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsIDEwMSwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5MTE4Ng!5e0!3m2!1sru!2sru!4v1605274996480!5m2!1sru!2sru" width="320" height="455"></iframe>
       </div>
-      <div class="page-footer__social social">
+      <div class="social page-footer__social">
         <a class="write-us button" href="form.html">Напишите нам</a>
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link social__link--instagram" href="#">Мы в Инстаграме</a>
+            <a class="social__link social__link--instagram" href="#"><span class="visually-hidden">Мы в Инстаграме</span></a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--facebook" href="#">Мы в Фейсбуке</a>
+            <a class="social__link social__link--facebook" href="#"><span class="visually-hidden">Мы в Фейсбуке</span></a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--twitter" href="#">Мы в Twitter</a>
+            <a class="social__link social__link--twitter" href="#"><span class="visually-hidden">Мы в Twitter</span></a>
           </li>
         </ul>
       </div>
-      <div class="page-footer__copyright copyright">
+      <div class="copyright page-footer__copyright">
         <b class="copyright__text">Разработано:</b>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML Academy</span></a>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <svg width="27" height="35" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.6 0h-.1L0 1.4v24.7l13.5 8 13.4-8V1.4L13.6 0zM25 12.1L13.5 5.3v-.1h-.1l-.1-.1v.1L1.9 12.1v-9l11.5-1.2L25 3.1v9zM13.4 6.8l11.5 6.7-4.5 2.6-7.1-4.2v1.4l5.9 3.5-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1L2 13.6l11.4-6.8zM1.9 15.1l11.4 6.8v1l-7.9-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.1-4.9v-5.2l3.4-2v10l-11.5 6.9L1.9 25v-9.9z" fill="#63D1BB"/></svg>
+          <span class="visually-hidden">HTML Academy</span>
+        </a>
       </div>
     </footer>
-    <section class="modal-select-size modal">
-      <h2 class="modal-select-size modal__title">Добавить в корзину</h2>
-      <p class="modal-select-size modal__text">Выберите размер:</p>
+    <section class="modal modal-select-size">
+      <h2 class="modal__title">Добавить в корзину</h2>
+      <p class="modal__text">Выберите размер:</p>
       <input class="input-size input-size--active" id="input-size-s" type="radio" name="input-size" value="input-size-s">
       <label class="label-size" for="input-size-s">S</label>
       <input class="input-size" id="input-size-m" type="radio" name="input-size" value="input-size-m">
       <label class="label-size" for="input-size-m">M</label>
       <input class="input-size" id="input-size-l" type="radio" name="input-size" value="input-size-l">
       <label class="label-size" for="input-size-l">L</label>
-      <button class="add-button" type="button">Добавить</button>
+      <button class="add-button button" type="button">Добавить</button>
     </section>
   </body>
 </html>
