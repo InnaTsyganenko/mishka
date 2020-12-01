@@ -1,0 +1,74 @@
+.form__fieldset {
+  padding: 15px 0;
+  border: none;
+}
+
+.form__legend {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: @lighter-mint;
+}
+
+.form__hidden-input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.form {
+  margin: 0 30px;
+  outline: 1px dotted rgb(221, 38, 175);
+  outline-offset: -1px;
+}
+
+.form__input {
+  font-family: "Open Sans", "Arial", sans-serif;
+  border: none;
+  box-shadow: inset 0 -2px 0 #000000;
+  padding: 17px 23px 17px 0;
+  font-size: 17px;
+  line-height: 18px;
+  color: @black-30;
+}
+
+.form__label {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.form__paragraph-full-name {
+  display: grid;
+}
+
+.form__label-name,
+.form__label-surname,
+.form__label-patronymic {
+  order: 1;
+}
+
+.form__input-name,
+.form__input-surname,
+.form__input-patronymic {
+  order: 2;
+}
+
+.form__input-add {
+  border: 2px solid @dark-grey;
+  margin: 0;
+  padding: 17px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  color: @black-30;
+  width: 218px;
+  min-height: 106px;
+}
+
+.form__required-text {
+  font-size: 14px;
+  line-height: 16px;
+  color: @dark-grey;
+}
