@@ -9,13 +9,13 @@
   </head>
   <body class="page__body">
     <header class="page-header">
-      <a class="page-header__logo">
-        <img class="page-header__img" src="img/logo-mobile.svg" width="86" height="35" alt="Интернет-магазин «Мишка»">
-      </a>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
+          <a class="main-nav__logo">
+            <img class="main-nav__img" src="img/logo-mobile.svg" width="86" height="35" alt="Интернет-магазин «Мишка»">
+          </a>
+          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <ul class="main-nav__list">
             <li class="main-nav__item main-nav__item--active">
               <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
             </li>
@@ -25,7 +25,7 @@
           </ul>
           <a class="main-nav__search-link" href="#">Поиск по сайту</a>
           <div class="main-nav__cart-list">
-            <a class="main-nav__cart-link" href="#">Корзина: <span class="items-count">пока пуста</span></a>
+            <a class="main-nav__cart-link" href="#">Корзина: <span class="main-nav__items-count">пока пуста</span></a>
           </div>
         </div>
       </nav>
