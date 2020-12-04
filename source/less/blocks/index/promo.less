@@ -12,7 +12,7 @@
   font-size: 27px;
   line-height: 30px;
   margin-bottom: 120px;
-  padding-top: 90px;
+  padding: 73px 30px 120px 30px;
 }
 
 .promo__list {
@@ -35,4 +35,83 @@
   padding: 24px 150px 31px 30px;
   color: @white;
   font-weight: 700;
+}
+
+@media (min-width: @tablet-width) {
+  .promo {
+    background: url("../img/hero-desktop.jpg") no-repeat center -57px;
+  }
+
+  .promo__wrapper {
+    margin: 0 50px;
+  }
+
+  .promo__caption {
+    font-size: 43px;
+    line-height: 50px;
+    margin: 0 50px;
+    margin-bottom: 250px;
+    padding-top: 100px;
+  }
+
+  .promo__list {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 20px;
+    line-height: 30px;
+    width: 668px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .promo__item:nth-child(1) {
+    width: 50%;
+    background-color: @light-mint;
+  }
+
+  .promo__item:nth-child(2) {
+    width: 50%;
+    background-color: @dark-mint;
+  }
+
+  .promo__link {
+    display: block;
+    padding: 25px 130px 35px 35px;
+    color: @white;
+    font-weight: 700;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo {
+    background: url("../img/hero-desktop.jpg") no-repeat center -47px;
+  }
+
+  .promo__wrapper {
+    margin: 0 50px;
+  }
+
+  .promo__caption {
+    font-size: 53px;
+    line-height: 57px;
+    margin: 0 50px;
+    margin-bottom: 235px;
+    padding-top: 112px;
+  }
+
+  .promo__list {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 20px;
+    line-height: 30px;
+    width: 1050px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .promo__link {
+    padding-right: 350px;
+  }
 }
