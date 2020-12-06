@@ -108,7 +108,7 @@
         <div class="map page-footer__box-map">
           <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999.3103556902515!2d30.32282745744139!3d59.93843567075764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x62740c0ffcd8a91f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsIDEwMSwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5MTE4Ng!5e0!3m2!1sru!2sru!4v1605274996480!5m2!1sru!2sru" height="455"></iframe>
         </div>
-        <a class="page-footer__write-us button" href="form.html">Напишите нам</a>
+        <a class="page-footer__write-us button" href="#">Напишите нам</a>
       </div>
       <div class="page-footer__container">
         <a class="page-footer__logo">
@@ -145,16 +145,22 @@
         </div>
       </div>
     </footer>
-    <section class="modal modal-select-size">
-      <h2 class="modal__title">Добавить в корзину</h2>
-      <p class="modal__text">Выберите размер:</p>
-      <input class="modal__input-size modal__input-size--active" id="input-size-s" type="radio" name="input-size" value="input-size-s">
-      <label class="modal__label-size" for="input-size-s">S</label>
-      <input class="modal__input-size" id="input-size-m" type="radio" name="input-size" value="input-size-m">
-      <label class="modal__label-size" for="input-size-m">M</label>
-      <input class="modal__input-size" id="input-size-l" type="radio" name="input-size" value="input-size-l">
-      <label class="modal__label-size" for="input-size-l">L</label>
-      <button class="modal__add-button button" type="button">Добавить</button>
+    <section class="modal">
+      <div class="modal__wrapper"></div>
+        <h2 class="modal__title">Добавить в корзину</h2>
+        <p class="modal__text">Выберите размер:</p>
+        <form class="modal__form" method="POST" action="https://echo.htmlacademy.ru/">
+          <div class="modal__form-container">
+            <input class="modal__input-size" id="input-size-s" type="radio" name="input-size" value="input-size-s">
+            <label class="modal__label-size modal__label--active" for="input-size-s">S</label>
+            <input class="modal__input-size" id="input-size-m" type="radio" name="input-size" value="input-size-m">
+            <label class="modal__label-size" for="input-size-m">M</label>
+            <input class="modal__input-size" id="input-size-l" type="radio" name="input-size" value="input-size-l">
+            <label class="modal__label-size" for="input-size-l">L</label>
+          </div>
+          <button class="modal__add-button button" type="button">Добавить</button>
+        </form>
+      </div>
     </section>
   </body>
 </html>

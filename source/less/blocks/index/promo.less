@@ -1,52 +1,36 @@
 .promo {
   background: url("../img/hero-mobile.jpg") no-repeat;
+
+  @media (min-width: @tablet-width) {
+    background: url("../img/hero-desktop.jpg") no-repeat center -57px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background: url("../img/hero-desktop.jpg") no-repeat center -47px;
+  }
 }
 
 .promo__wrapper {
   outline: 1px dotted orange;
   outline-offset: -1px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 50px;
+  }
 }
 
 .promo__caption {
   text-align: center;
   font-size: 27px;
   line-height: 30px;
-  margin-bottom: 120px;
+  margin-bottom: 0;
   padding: 73px 30px 120px 30px;
-}
 
-.promo__list {
-  list-style: none;
-  width: 320px;
-  margin: 0;
-  padding: 0;
-}
-
-.promo__item:nth-child(1) {
-  background-color: @light-mint;
-}
-
-.promo__item:nth-child(2) {
-  background-color: @dark-mint;
-}
-
-.promo__link {
-  display: block;
-  padding: 24px 150px 31px 30px;
-  color: @white;
-  font-weight: 700;
-}
-
-@media (min-width: @tablet-width) {
-  .promo {
-    background: url("../img/hero-desktop.jpg") no-repeat center -57px;
-  }
-
-  .promo__wrapper {
-    margin: 0 50px;
-  }
-
-  .promo__caption {
+  @media (min-width: @tablet-width) {
     font-size: 43px;
     line-height: 50px;
     margin: 0 50px;
@@ -54,7 +38,22 @@
     padding-top: 100px;
   }
 
-  .promo__list {
+  @media (min-width: @desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
+    margin: 0 50px;
+    margin-bottom: 235px;
+    padding-top: 112px;
+  }
+}
+
+.promo__list {
+  list-style: none;
+  width: 320px;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
     font-size: 20px;
@@ -65,42 +64,7 @@
     padding: 0;
   }
 
-  .promo__item:nth-child(1) {
-    width: 50%;
-    background-color: @light-mint;
-  }
-
-  .promo__item:nth-child(2) {
-    width: 50%;
-    background-color: @dark-mint;
-  }
-
-  .promo__link {
-    display: block;
-    padding: 25px 130px 35px 35px;
-    color: @white;
-    font-weight: 700;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .promo {
-    background: url("../img/hero-desktop.jpg") no-repeat center -47px;
-  }
-
-  .promo__wrapper {
-    margin: 0 50px;
-  }
-
-  .promo__caption {
-    font-size: 53px;
-    line-height: 57px;
-    margin: 0 50px;
-    margin-bottom: 235px;
-    padding-top: 112px;
-  }
-
-  .promo__list {
+  @media (min-width: @desktop-width) {
     display: flex;
     flex-wrap: wrap;
     font-size: 20px;
@@ -110,8 +74,40 @@
     margin: 0;
     padding: 0;
   }
+}
 
-  .promo__link {
+.promo__item:nth-child(1) {
+  background-color: @light-mint;
+
+  @media (min-width: @tablet-width) {
+    width: 50%;
+    background-color: @light-mint;
+  }
+}
+
+.promo__item:nth-child(2) {
+  background-color: @dark-mint;
+
+  @media (min-width: @tablet-width) {
+    width: 50%;
+    background-color: @dark-mint;
+  }
+}
+
+.promo__link {
+  display: block;
+  padding: 24px 150px 31px 30px;
+  color: @white;
+  font-weight: 700;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    padding: 25px 130px 35px 35px;
+    color: @white;
+    font-weight: 700;
+  }
+
+  @media (min-width: @desktop-width) {
     padding-right: 350px;
   }
 }
