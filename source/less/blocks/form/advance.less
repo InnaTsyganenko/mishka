@@ -1,7 +1,16 @@
+.advance {
+  display: grid;
+  z-index: 1;
+}
+
 .advance__wrapper {
   margin: 0 30px;
   outline: 1px dotted green;
   outline-offset: -1px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 50px;
+  }
 }
 
 .advance__title {
@@ -9,11 +18,26 @@
   font-size: 27px;
   line-height: 30px;
   margin: 0;
-  padding: 73px 5px;
+  padding: 73px 15px;
   background-color: @lighter-grey;
+
+  @media (min-width: @tablet-width) {
+    font-size: 43px;
+    line-height: 50px;
+    padding: 93px 15px 50px 15px;
+  }
 }
 
 .advance__text {
   font-size: 13px;
   color: @dark-grey;
+  margin-top: 17px;
+  margin-bottom: 30px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+    line-height: 30px;
+    margin-top: 90px;
+    margin-bottom: 80px;
+  }
 }
