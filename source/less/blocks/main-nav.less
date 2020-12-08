@@ -1,22 +1,233 @@
 .main-nav {
-  font-size: 17px;
-  line-height: 24px;
   font-weight: 700;
 }
 
+.main-nav__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto auto;
+  align-items: start;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    position: relative;
+    grid-template-columns: 167px 150px 85px 266px;
+    grid-template-rows: auto auto;
+    align-items: start;
+    margin: 0 50px;
+    margin-bottom: -55px;
+    z-index: 10;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 220px 220px 342px 266px;
+    grid-template-rows: auto auto;
+    align-items: start;
+    margin-top: 20px;
+  }
+}
+
+.main-nav__logo {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: center;
+  align-self: center;
+  margin: 22px auto 18px auto;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+    min-height: 67px;
+    margin: 0;
+    margin-top: 22px;
+    margin-bottom: 7px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    justify-self: start;
+    align-content: center;
+    margin-top: 10px;
+  }
+}
+
+.main-nav__toggle {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: end;
+  align-self: center;
+  margin-right: 32px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
 .main-nav__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  grid-column: 1;
+  grid-row: 2;
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 167px 150px;
+    grid-template-rows: auto;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 2;
+    font-size: 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 220px 220px;
+    grid-template-rows: auto;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 1;
+    align-self: center;
+    font-size: 17px;
+    margin-bottom: 40px;
+  }
 }
 
+.main-nav__list:first-child {
+  grid-column: 1;
+  grid-row: 1;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 1;
+    grid-row: 1;
+  }
+}
+
+.main-nav__list:nth-child(2) {
+  grid-column: 1;
+  grid-row: 2;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
+
+.main-nav__search-link {
+  grid-column: 1;
+  grid-row: 4;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 3;
+    grid-row: 1;
+    justify-self: center;
+    font-size: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 3;
+    grid-row: 1;
+    justify-self: center;
+    font-size: 0;
+  }
+}
+
+.main-nav__cart-list {
+  grid-column: 1;
+  grid-row: 5;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 4;
+    grid-row: 1;
+    justify-self: end;
+    align-self: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 4;
+    grid-row: 1;
+    justify-self: end;
+    align-self: start;
+  }
+}
+
+.main-nav__item,
 .main-nav__link,
-.main-nav__search-link,
-.main-nav__cart-link {
-  display: block;
-  color: @black;
-  height: 79px;
-  margin: 0;
-  padding-left: 46px;
+.main-nav__cart-list,
+.main-nav__search-link {
+  display: inline-grid;
+  min-height: 59px;
   box-shadow: 0 1px 0 @light-grey, inset 0 1px 0 @light-grey;
+  color: @black;
+  padding: 10px;
+  padding-left: 76px;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    box-shadow: none;
+    color: @black;
+    padding: 0;
+  }
+}
+
+.main-nav__item,
+.main-nav__cart-link {
+  padding: 0;
+  color: @black;
+}
+
+.main-nav__new-arrivals,
+.main-nav__sale {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    font-size: 15px;
+    color: @black;
+  }
+}
+
+.main-nav__delivery-text {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline-grid;
+    grid-column: 4;
+    grid-row: 2;
+    justify-self: end;
+    margin: 0;
+    align-self: center;
+    font-size: 15px;
+    font-weight: 400;
+    color: @dark-grey;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: inline-grid;
+    grid-column: 4;
+    grid-row: 2;
+    justify-self: end;
+    margin: 0;
+    align-self: center;
+    font-size: 15px;
+    font-weight: 400;
+    color: @dark-grey;
+  }
 }

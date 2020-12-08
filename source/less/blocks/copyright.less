@@ -1,15 +1,20 @@
 .copyright {
-  margin: 0 30px;
-  outline: 1px dotted tomato;
-  outline-offset: -1px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .copyright__text {
   font-size: 19px;
   line-height: 18px;
-  color: @dark-grey;
+  margin-right: 15px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 25px;
+  }
 }
 
 .copyright__link {
+  margin-bottom: -10px;
   background: no-repeat;
 }

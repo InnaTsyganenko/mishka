@@ -37,7 +37,7 @@
         <div class="catalog__wrapper">
           <ul class="catalog__list">
             <li class="catalog__item">
-              <a class="catalog__item-link" href="#">
+              <a class="details-about-bunny" href="#">
                 <h3 class="catalog__title">Зайчик-попрыгайчик</h3>
                 <img class="catalog__img" src="img/bunny.jpg" width="260" height="195" alt="Вязаный зайчик в голубом костюме">
               </a>
@@ -48,7 +48,7 @@
               </button>
             </li>
             <li class="catalog-item">
-              <a class="catalog__item-link" href="#">
+              <a class="details-about-small-laundry-basket" href="#">
                 <h3 class="catalog__title">Корзинка для белья</h3>
                 <img class="catalog__img" src="img/small-laundry-basket.jpg" width="260" height="195" alt="Малая вязаная корзинка бело-оранжевая">
               </a>
@@ -59,7 +59,7 @@
               </button>
             </li>
             <li class="catalog-item">
-              <a class="catalog__item-link" href="#">
+              <a class="details-about-big-laundry-basket" href="#">
                 <h3 class="catalog__title">Большая корзинка для игрушек</h3>
                 <img class="catalog__img" src="img/big-laundry-basket.jpg" width="260" height="195" alt="Большая вязаная корзинка бело-зелёная">
               </a>
@@ -105,16 +105,20 @@
         </div>
       </div>
     </footer>
-    <section class="modal modal-select-size">
+    <section class="modal">
       <h2 class="modal__title">Добавить в корзину</h2>
       <p class="modal__text">Выберите размер:</p>
-      <input class="modal__input-size modal__input-size--active" id="input-size-s" type="radio" name="input-size" value="input-size-s">
-      <label class="modal__label-size" for="input-size-s">S</label>
-      <input class="modal__input-size" id="input-size-m" type="radio" name="input-size" value="input-size-m">
-      <label class="modal__label-size" for="input-size-m">M</label>
-      <input class="modal__input-size" id="input-size-l" type="radio" name="input-size" value="input-size-l">
-      <label class="modal__label-size" for="input-size-l">L</label>
-      <button class="modal__add-button button" type="button">Добавить</button>
+      <form class="modal__form" method="POST" action="https://echo.htmlacademy.ru/">
+        <div class="modal__form-container">
+          <input class="modal__input-size" id="input-size-s" type="radio" name="input-size" value="input-size-s">
+          <label class="modal__label-size modal__label-size--active" for="input-size-s">S</label>
+          <input class="modal__input-size" id="input-size-m" type="radio" name="input-size" value="input-size-m">
+          <label class="modal__label-size" for="input-size-m">M</label>
+          <input class="modal__input-size" id="input-size-l" type="radio" name="input-size" value="input-size-l">
+          <label class="modal__label-size" for="input-size-l">L</label>
+        </div>
+        <button class="modal__add-button button" type="button">Добавить</button>
+      </form>
     </section>
   </body>
 </html>
