@@ -1,12 +1,14 @@
 .advance {
   display: grid;
   z-index: 1;
+
+  @media (min-width: @tablet-width) {
+    border-top: 1px solid @black-10;
+  }
 }
 
 .advance__wrapper {
   margin: 0 30px;
-  outline: 1px dotted green;
-  outline-offset: -1px;
 
   @media (min-width: @tablet-width) {
     margin: 0 50px;
@@ -26,6 +28,11 @@
     line-height: 50px;
     padding: 93px 15px 50px 15px;
   }
+
+  @media (min-width: @desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .advance__text {
@@ -37,7 +44,10 @@
   @media (min-width: @tablet-width) {
     font-size: 17px;
     line-height: 30px;
-    margin-top: 90px;
-    margin-bottom: 80px;
+    margin: 90px 30px 80px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 50px 175px;
   }
 }
