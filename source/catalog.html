@@ -10,26 +10,28 @@
   <body class="page__body">
     <header class="page-header">
       <nav class="main-nav">
-        <div class="main-nav__wrapper">
-          <a class="main-nav__logo" href="index.html">
-            <img class="main-nav__img" src="img/logo-mobile.svg" width="86" height="35" alt="Интернет-магазин «Мишка»">
-          </a>
+        <a class="main-nav__logo" href="index.html">
+          <img class="main-nav__img" src="img/logo-mobile.svg" width="86" height="35" alt="Интернет-магазин «Мишка»">
+        </a>
+        <div class="main-nav__mobile-menu main-nav__mobile-menu--closed main-nav-mobile-menu--nojs">
           <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-          <ul class="main-nav__list">
-            <li class="main-nav__item main-nav__item--active">
-              <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="form.html">Вязание на заказ</a>
-            </li>
-          </ul>
-          <a class="main-nav__search-link" href="#">Поиск по сайту</a>
-          <div class="main-nav__cart-list">
-            <a class="main-nav__cart-link" href="#">Корзина: <span class="main-nav__items-count">пока пуста</span></a>
+          <div class="main-nav__mobile-menu-wrapper">
+            <ul class="main-nav__list">
+              <li class="main-nav__item main-nav__item--active">
+                <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="form.html">Вязание на заказ</a>
+              </li>
+            </ul>
+            <a class="main-nav__search-link" href="#">Поиск по сайту</a>
+            <div class="main-nav__cart-list">
+              <a class="main-nav__cart-link" href="#">Корзина: <span class="main-nav__items-count">пока пуста</span></a>
+            </div>
+            <a class="main-nav__new-arrivals" href="#">Новые поступления</a>
+            <a class="main-nav__sale" href="#">Распродажа</a>
+            <p class="main-nav__delivery-text">Бесплатная доставка по России</p>
           </div>
-          <a class="main-nav__new-arrivals" href="#">Новые поступления</a>
-          <a class="main-nav__sale" href="#">Распродажа</a>
-          <p class="main-nav__delivery-text">Бесплатная доставка по России</p>
         </div>
       </nav>
     </header>
@@ -135,5 +137,19 @@
         <button class="modal__add-button button" type="button">Добавить</button>
       </form>
     </section>
+    <script>
+      var navMob = document.querySelector('.main-nav__mobile-menu');
+      var navToggle = document.querySelector('.main-nav__toggle');
+      navMob.classList.remove('main-nav-mobile-menu--nojs');
+      navToggle.addEventListener('click', function() {
+        if (navMob.classList.contains('main-nav__mobile-menu--closed')) {
+          navMob.classList.remove('main-nav__mobile-menu--closed');
+          navMob.classList.add('main-nav__mobile-menu--opened');
+        } else {
+          navMob.classList.add('main-nav__mobile-menu--closed');
+          navMob.classList.remove('main-nav__mobile-menu--opened');
+        }
+      });
+    </script>
   </body>
 </html>
