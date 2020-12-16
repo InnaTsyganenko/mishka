@@ -1,47 +1,78 @@
-.contacts__wrapper {
-  margin: 0 30px;
-  outline: 1px dotted purple;
-  outline-offset: -1px;
+.contacts__container {
+  margin: 0 30px 38px 30px;
 
   @media (min-width: @tablet-width) {
     margin: 0 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 36% 64%;
+    align-items: start;
+    margin: 3px 50px 105px 225px;
   }
 }
 
 .contacts__title {
   font-size: 18px;
   line-height: 30px;
+  margin-bottom: 28px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 50px;
+    position: relative;
+    margin: 70px 0 50px 0;
     font-size: 43px;
     line-height: 50px;
   }
 
   @media (min-width: @desktop-width) {
+    grid-column: 1;
+    grid-row: 1;
     font-size: 53px;
     line-height: 57px;
-    margin-top: 0;
+    padding: 0;
+    margin: 80px 0 0 0;
+  }
+}
+
+.contacts__title::after {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    display: inline-grid;
+    content: "";
+    width: 47px;
+    height: 81px;
+    margin: -25px 0 0 397px;
+    background: url("data:image/svg+xml,%3Csvg width='47' height='81' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.766 3.862v38.52L47 23.071 7.766 3.862zM0 80.9V0h3.833v80.9H0z' fill='%2363D1BB'/%3E%3Cpath d='M3.833.1H0V81h3.833V.1z' fill='%23231F20'/%3E%3C/svg%3E") right bottom no-repeat;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: -20px 0 0 -385px;
   }
 }
 
 .contacts__list {
+  display: grid;
+  grid-template-columns: 78px 180px;
+  grid-template-rows: auto;
+  align-items: start;
+
   @media (min-width: @tablet-width) {
-    display: grid;
     grid-template-columns: 10% 40% 10% 40%;
-    grid-template-rows: auto;
-    align-items: start;
   }
 
   @media (min-width: @desktop-width) {
-    display: grid;
-    grid-template-columns: 20% 80%;
+    grid-column: 1;
+    grid-row: 2;
+    grid-template-columns: 19% 81%;
     grid-template-rows: auto auto;
+    margin: 9px 0 0 0;
   }
 }
 
 .contacts__description {
-  margin-left: 25px;
+  margin-left: 0;
 
   @media (min-width: @tablet-width) {
     margin-left: 10px;
@@ -56,10 +87,14 @@
   color: @dark-grey;
 
   @media (min-width: @tablet-width) {
-    display: inline-grid;
     font-size: 17px;
     line-height: 30px;
   }
+}
+
+.contacts__term:first-child,
+.contacts__description:first-child {
+  margin-bottom: 30px;
 }
 
 .contacts__term:first-child {
@@ -92,15 +127,56 @@
 
 .contacts__e-mail {
   background-image: linear-gradient(to right, @lighter-mint 99%, transparent 100%);
-  background-size: 100% 1px;
-  background-position: 0 28px;
+  background-size: 200px 1px;
+  background-position: 0 26px;
   background-repeat: no-repeat;
 
   @media (min-width: @tablet-width) {
+    padding-bottom: 10px;
+    background-position: 0 70%;
     background-size: 80% 1px;
   }
 
   @media (min-width: @desktop-width) {
-    background-size: 51% 1px;
+    padding-bottom: 10px;
+    background-position: 0 85%;
+    background-size: 76% 1px;
+  }
+}
+
+.contacts__box-map {
+  margin: 62px -30px 0 -30px;
+
+  @media (min-width: @tablet-width) {
+    margin: 50px -50px 0 -50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    margin: 0;
+    max-height: 457px;
+  }
+}
+
+.contacts__write-us-button {
+  margin: 37px auto 10px auto;
+  width: 225px;
+  font-size: 18px;
+  line-height: 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 198px;
+    font-size: 17px;
+    margin: 50px auto 57px auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 1;
+    grid-row: 2;
+    margin: 0;
+    align-self: end;
+    justify-self: start;
   }
 }

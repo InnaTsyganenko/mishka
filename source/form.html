@@ -9,12 +9,13 @@
   </head>
   <body class="page__body">
     <header class="page-header">
-        <nav class="main-nav">
-          <div class="main-nav__wrapper">
-            <a class="main-nav__logo" href="index.html">
-              <img class="main-nav__img" src="img/logo-mobile.svg" width="86" height="35" alt="Интернет-магазин «Мишка»">
-            </a>
-            <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <nav class="main-nav">
+        <a class="main-nav__logo" href="index.html">
+          <img class="main-nav__img" src="img/logo-mobile.svg" width="86" height="35" alt="Интернет-магазин «Мишка»">
+        </a>
+        <div class="main-nav__mobile-menu main-nav__mobile-menu--closed main-nav-mobile-menu--nojs">
+          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <div class="main-nav__mobile-menu-wrapper">
             <ul class="main-nav__list">
               <li class="main-nav__item main-nav__item--active">
                 <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
@@ -31,8 +32,9 @@
             <a class="main-nav__sale" href="#">Распродажа</a>
             <p class="main-nav__delivery-text">Бесплатная доставка по России</p>
           </div>
-        </nav>
-      </header>
+        </div>
+      </nav>
+    </header>
     <main class="page-form page-main">
       <h1 class="visually-hidden">Интернет-магазин «Мишка» - вещи ручной работы для дома</h1>
       <section class="advance">
@@ -165,5 +167,19 @@
         </div>
       </div>
     </footer>
+    <script>
+      var navMob = document.querySelector('.main-nav__mobile-menu');
+      var navToggle = document.querySelector('.main-nav__toggle');
+      navMob.classList.remove('main-nav-mobile-menu--nojs');
+      navToggle.addEventListener('click', function() {
+        if (navMob.classList.contains('main-nav__mobile-menu--closed')) {
+          navMob.classList.remove('main-nav__mobile-menu--closed');
+          navMob.classList.add('main-nav__mobile-menu--opened');
+        } else {
+          navMob.classList.add('main-nav__mobile-menu--closed');
+          navMob.classList.remove('main-nav__mobile-menu--opened');
+        }
+      });
+    </script>
   </body>
 </html>
