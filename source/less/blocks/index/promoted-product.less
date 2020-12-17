@@ -3,26 +3,26 @@
   content: "";
   width: 320px;
   height: 7px;
-  background: url("../img/zigzag-line-mobile.png") no-repeat;
-  margin: 36px 0 8px 0;
+  background: url("../img/zigzag-line-mobile.svg") center no-repeat;
+  margin: 35px 0 11px 0;
 
   @media (min-width: @tablet-width) {
     height: 17px;
     width: 100%;
-    background: url("../img/zigzag-line-tablet.png") no-repeat;
+    background: url("../img/zigzag-line-tablet.svg") center no-repeat;
     margin: 51px 0 5px 0;
   }
 
   @media (min-width: @desktop-width) {
     height: 23px;
     width: 100%;
-    background: url("../img/zigzag-line-desktop.png") no-repeat;
+    background: url("../img/zigzag-line-desktop.svg") center no-repeat;
     margin: 75px 0 13px 0;
   }
 }
 
 .promoted-product__wrapper {
-  margin: 0 30px;
+  margin: 32px 30px;
 
   @media (min-width: @tablet-width) {
     margin: 40px 50px;
@@ -44,7 +44,7 @@
 .promoted-product__title {
   font-size: 25px;
   line-height: 30px;
-  margin: 32px 0 0 0;
+  margin: 0;
 
   @media (min-width: @tablet-width) {
     grid-column-start: 1;
@@ -71,7 +71,7 @@
   text-transform: uppercase;
   color: @light-mint;
   font-weight: 700;
-  margin-top: 5px;
+  margin: 4px 0 17px 0;
 
   @media (min-width: @tablet-width) {
     grid-column: 4;
@@ -113,12 +113,12 @@
 
 .promoted-product__characteristic {
   display: grid;
-  grid-template-columns: 97px 162px;
+  grid-template-columns: 98px 162px;
   grid-template-rows: auto auto auto;
   font-size: 15px;
   line-height: 20px;
   color: @dark-grey;
-  margin: 19px 0 27px 0;
+  margin: 18px 0 31px 0;
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 97px 197px;
@@ -138,7 +138,7 @@
 
 .promoted-product__characteristic-term,
 .promoted-product__characteristic-description {
-  padding: 10px 0;
+  padding: 10px 0 9px 0;
   border-bottom: 1px solid @white-grey;
   margin: 0;
 }

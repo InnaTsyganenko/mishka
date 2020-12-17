@@ -1,0 +1,75 @@
+.form__fieldset-type {
+  margin: 20px 0 0 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 83px 0 55px 0;
+  }
+}
+
+.form__container-type {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.form__label-interior-accessories {
+  margin: 32px 0 -15px 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 32px 0 -15px 8px;
+  }
+}
+
+.form__label-childrens-toy {
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 25px 0 0 12px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 25px 0 0 8px;
+  }
+}
+
+.form__input-interior-accessories + .form__label::before,
+.form__input-interior-accessories:not(:disabled):not(:checked) + .form__label:hover::before,
+.form__input-interior-accessories:focus:not(:checked) + .form__label::before,
+.form__input-childrens-toy + .form__label::before,
+.form__input-childrens-toy:not(:disabled):not(:checked) + .form__label:hover::before,
+.form__input-childrens-toy:focus:not(:checked) + .form__label::before {
+  display: inline-flex;
+  content: "";
+  width: 42px;
+  height: 42px;
+  padding-right: 23px;
+  background: url("data:image/svg+xml,%3Csvg width='42' height='41' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.91 1.513c10.584 0 19.132 8.42 19.132 18.766 0 10.347-8.549 18.766-19.132 18.766-10.584 0-19.132-8.419-19.132-18.766 0-10.347 8.548-18.766 19.132-18.766z' stroke='%23444' stroke-width='2'/%3E%3C/svg%3E") left top no-repeat;
+
+  @media (min-width: @tablet-width) {
+    transform: scale(1.24);
+    padding-right: 30px;
+    background-position: 3px center;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-position: left top;
+  }
+}
+
+.form__input-interior-accessories:checked + .form__label::before,
+.form__input-childrens-toy:checked + .form__label::before {
+  display: inline-flex;
+  content: "";
+  width: 42px;
+  height: 42px;
+  padding-right: 19px;
+  background: url("data:image/svg+xml,%3Csvg width='42' height='42' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.91 2.513c10.584 0 19.132 8.42 19.132 18.766 0 10.347-8.549 18.766-19.132 18.766-10.584 0-19.132-8.419-19.132-18.766 0-10.347 8.548-18.766 19.132-18.766z' stroke='%23444' stroke-width='2'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M21.194 13.24a7.933 7.933 0 110 15.867 7.933 7.933 0 110-15.866z' fill='%2362D1BA'/%3E%3C/svg%3E") left top no-repeat;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-position: left top;
+  }
+}
