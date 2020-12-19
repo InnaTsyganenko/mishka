@@ -1,6 +1,17 @@
-.form__fieldset-email .form__input {
+.container-email {
+  margin: 7px 0 14px 0;
+
   @media (min-width: @tablet-width) {
-    margin: -45px 50px 0 0;
+    margin: -35px 0 0 -21px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 8px 0 0 -50px;
+  }
+}
+
+.container-email__input {
+  @media (min-width: @tablet-width) {
     width: 100%;
     padding: 15px 15px 14px 18px;
   }
@@ -12,8 +23,7 @@
   }
 }
 
-
-.form__input-email::placeholder {
+.container-email__input::placeholder {
   display: inline-flex;
   content: "";
   width: 32px;

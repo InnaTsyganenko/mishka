@@ -1,29 +1,18 @@
-.form__fieldset-tel {
-  margin-top: 12px;
-}
-
-.form__fieldset-tel .form__container {
+.container-tel {
   padding: 5px 0 10px 0;
+  margin: 0 0 10px 0;
 
   @media (min-width: @tablet-width) {
     padding: 10px 0 0 0;
-  }
-}
-
-.form__fieldset-tel .form__legend {
-  padding-right: 28px;
-
-  @media (min-width: @tablet-width) {
-    margin: 0;
-    padding: 30px 0 0 0;
+    margin: -62px 0 0 0;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 30px 0 0 60px;
+    margin: -62px 0 0 -30px;
   }
 }
 
-.form__input-tel {
+.container-tel__input {
   padding-bottom: 17px;
 
   @media (min-width: @tablet-width) {
@@ -32,13 +21,12 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin: 16px 0 0 -29px;
-    width: 680px;
+    width: 97%;
     padding: 15px 5px 14px 15px;
   }
 }
 
-.form__input-tel::placeholder {
+.container-tel__input::placeholder {
   display: inline-flex;
   content: "";
   width: 25px;
@@ -51,7 +39,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .form__input-tel::placeholder {
+  .container-tel__input::placeholder {
     margin-right: 20px;
     background-position: 650px center;
   }

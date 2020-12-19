@@ -1,5 +1,5 @@
 .form {
-  margin: 0 29px;
+  margin: 0 30px;
 
   @media (min-width: @tablet-width) {
     margin: 0;
@@ -8,15 +8,16 @@
 
 .form__fieldset {
   border: none;
-  border-top: 1px solid @dark-grey;
+  border-top: 1px solid @lighter-mint;
   padding: 0;
+  margin: 15px 0;
 
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 28.1% 71.9%;
     align-items: start;
-    margin: 0 50px;
     border: none;
+    margin: 0 50px;
   }
 
   @media (min-width: @desktop-width) {
@@ -25,10 +26,74 @@
   }
 }
 
-.form__bgcolor-box {
+.form__fieldset-type {
+  margin: 21px 0 0 0;
+
   @media (min-width: @tablet-width) {
-    background-color: @lighter-grey;
-    padding: 25px 0 0 0;
+    margin: 83px 50px 73px 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 82px 200px 70px 110px;
+  }
+}
+
+.form__fieldset-color {
+  margin: 17px 0 0 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 62px 50px 51px 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 65px 200px 53px 110px;
+  }
+}
+
+.form__fieldset-full-name {
+  margin: 14px 0 0 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 69px 50px 12px 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 68px 200px 12px 110px;
+  }
+}
+
+.form__fieldset-tel {
+  margin: 4px 0 0 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 30px 50px 16px 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 61px 200px 20px 110px;
+  }
+}
+
+
+.form__fieldset-email {
+  @media (min-width: @tablet-width) {
+    margin: 0 50px 43px 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 43px 200px 45px 110px;
+  }
+}
+
+.form__fieldset-add {
+  margin: 20px 0 0 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 71px 50px 14px 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 70px 200px 15px 110px;
   }
 }
 
@@ -42,13 +107,47 @@
   @media (min-width: @tablet-width) {
     grid-column: 1;
     grid-row: 1;
-    margin: 0 50px;
   }
 
   @media (min-width: @desktop-width) {
     grid-column: 1;
     grid-row: 1;
-    margin: 0 0 0 110px;
+    padding: 0;
+  }
+}
+
+.form__fieldset-color .form__legend {
+  padding-right: 17px;
+}
+
+.form__fieldset-full-name .form__legend {
+  padding-right: 19px;
+}
+
+.form__fieldset-tel .form__legend {
+  padding-right: 28px;
+
+  @media (min-width: @tablet-width) {
+    padding: 30px 0 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
+}
+
+.form__fieldset-email .form__legend {
+  padding-right: 21px;
+}
+
+.form__fieldset-add .form__legend {
+  padding-right: 21px;
+}
+
+.form__bgcolor-box {
+  @media (min-width: @tablet-width) {
+    background-color: @lighter-grey;
+    padding: 5px 0;
   }
 }
 
@@ -59,7 +158,6 @@
   @media (min-width: @tablet-width) {
     grid-column: 2;
     grid-row: 1;
-    margin-top: -62px;
   }
 }
 
@@ -83,7 +181,7 @@
     font-size: 19px;
     line-height: 18px;
     padding: 15px 15px 14px 15px;
-    width: calc(100% - 80px);
+    width: auto;
   }
 }
 
@@ -109,11 +207,11 @@
     text-align: right;
     font-size: 17px;
     line-height: 30px;
-    margin: 15px 50px 0 0;
+    margin: 13px 50px 0 0;
   }
 
   @media (min-width: @desktop-width) {
-    margin-right: 225px;
+    margin: 17px 225px 0 0;
   }
 }
 
@@ -128,7 +226,7 @@
     width: 230px;
     margin-top: -40px;
     margin-left: 50px;
-    margin-bottom: 45px;
+    margin-bottom: 50px;
     padding: 16px;
   }
 
