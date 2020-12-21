@@ -44,7 +44,6 @@
   @media (min-width: @tablet-width) {
     grid-column: 2;
     grid-row: 2;
-    margin-bottom: 38px;
   }
 
   @media (min-width: @desktop-width) {
@@ -84,7 +83,7 @@
   content: "";
   width: 34px;
   height: 34px;
-  margin-right: 23px;
+  margin: 0 23px 0 0;
   border: 2px solid @dark-grey;
 
   @media (min-width: @tablet-width) {
@@ -96,8 +95,8 @@
 .checkbox__input:checked + .checkbox__label::after {
   display: inline-grid;
   position: absolute;
-  top: 10px;
-  left: 8px;
+  top: 11px;
+  left: 7px;
   content: "";
   width: 24px;
   height: 17px;
