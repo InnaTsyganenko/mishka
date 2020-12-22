@@ -1,0 +1,108 @@
+.checkbox__item {
+  margin: 23px 0 0 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 39px 0 0 0;
+  }
+}
+
+.checkbox__label {
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 0 13px;
+  }
+}
+
+.checkbox__input:first-of-type + .checkbox__label {
+  @media (min-width: @tablet-width) {
+    grid-column: 1;
+    grid-row: 1;
+  }
+}
+
+.checkbox__input:nth-of-type(2) + .checkbox__label {
+  @media (min-width: @tablet-width) {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
+
+.checkbox__input:nth-of-type(3) + .checkbox__label {
+  @media (min-width: @tablet-width) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 3;
+    grid-row: 1;
+  }
+}
+
+.checkbox__input:nth-of-type(4) + .checkbox__label {
+  @media (min-width: @tablet-width) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+}
+
+.checkbox__input:nth-of-type(5) + .checkbox__label {
+  @media (min-width: @tablet-width) {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
+
+.checkbox__input:nth-of-type(6) + .checkbox__label {
+  @media (min-width: @tablet-width) {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 3;
+    grid-row: 2;
+  }
+}
+
+.checkbox__input + .checkbox__label::before,
+.checkbox__input:not(:disabled):not(:checked) + .checkbox__label:hover::before,
+.checkbox__input:focus:not(:checked) + .checkbox__label::before {
+  display: inline-grid;
+  content: "";
+  width: 34px;
+  height: 34px;
+  margin: 0 23px 0 0;
+  border: 2px solid @dark-grey;
+
+  @media (min-width: @tablet-width) {
+    transform: scale(1.33);
+    margin-right: 37px;
+  }
+}
+
+.checkbox__input:checked + .checkbox__label::after {
+  display: inline-grid;
+  position: absolute;
+  top: 11px;
+  left: 7px;
+  content: "";
+  width: 24px;
+  height: 17px;
+  background: url("data:image/svg+xml,%3Csvg width='24' height='17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M23.963 1.684l-.994-.992L8.766 14.786 1.735 7.775l-.994.991 7.03 7.012.995.991 1.065-.991L23.963 1.684z' fill='%23000'/%3E%3C/svg%3E") no-repeat;
+
+  @media (min-width: @tablet-width) {
+    transform: scale(1.33);
+  }
+}
