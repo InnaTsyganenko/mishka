@@ -59,7 +59,11 @@
             <dt class="promoted-product__characteristic-term">Высота:</dt>
             <dd class="promoted-product__characteristic-description">15 см</dd>
           </dl>
-          <img class="promoted-product__img" src="img/triple-set-mobile.jpg" width="260" height="315" alt="Фото товара: три вязаные корзинки в руках">
+          <picture class="promoted-product__img-container">
+            <source class="promoted-product__img" media="(min-width: 1200px)" srcset="img/triple-set-desktop.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+            <source class="promoted-product__img" media="(min-width: 768px)" srcset="img/triple-set-tablet.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+            <img class="promoted-product__img" srcset="img/triple-set-mobile.jpg 1x, img/triple-set-mobile@2x.jpg 2x" width="260" height="315" alt="Фото товара: три вязаные корзинки в руках">
+          </picture>
           <p class="promoted-product__price">Цена: 990 руб.</p>
           <button class="promoted-product__button-order button" type="button">Заказать</button>
         </div>
