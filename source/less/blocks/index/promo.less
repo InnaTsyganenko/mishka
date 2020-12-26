@@ -142,6 +142,15 @@
   }
 }
 
+.promo__link:hover .promo__link-icon,
+.promo__link:focus .promo__link-icon {
+  fill: @promo-link-icon-hover;
+}
+
+.promo__link:active .promo__link-icon {
+  fill: @promo-link-icon-down;
+}
+
 .promo__item:nth-child(2) .promo__link {
   position: relative;
   background: @dark-mint;
@@ -175,7 +184,6 @@
   top: 22px;
   left: 233px;
 
-
   @media (min-width: @tablet-width) {
     top: 31px;
     left: 240px;
@@ -189,13 +197,4 @@
 
 .promo__link-icon {
   fill: @promo-link-icon;
-
-  &:hover,
-  &:focus {
-    fill: @promo-link-icon-hover;
-  }
-
-  &:active {
-    fill: @promo-link-icon-down;
-  }
 }
