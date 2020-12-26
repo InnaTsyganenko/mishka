@@ -8,6 +8,20 @@
   color: @black-30;
   border: 2px solid @dark-grey;
   margin: 23px 0 0 0;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    border: 2px solid @lighter-mint;
+  }
+
+  &:active {
+    color: @black;
+  }
+
+  .textarea__add:active::placeholder {
+    font-size: 0;
+  }
 
   @media (min-width: @tablet-width) {
     padding: 16px 15px;

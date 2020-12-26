@@ -125,11 +125,21 @@
   }
 }
 
-.contacts__e-mail {
+.contacts__email-link {
+  color: @dark-grey;
   background-image: linear-gradient(to right, @lighter-mint 99%, transparent 100%);
   background-size: 200px 1px;
   background-position: 0 26px;
   background-repeat: no-repeat;
+
+  &:hover,
+  &:focus {
+    color: @email-link-hover;
+  }
+
+  &:active {
+    background-image: none;
+  }
 
   @media (min-width: @tablet-width) {
     padding-bottom: 10px;

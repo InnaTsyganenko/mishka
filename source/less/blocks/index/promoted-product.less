@@ -37,7 +37,7 @@
     display: grid;
     grid-template-columns: 16.7% 33.3% 50%;
     grid-template-rows: auto auto auto auto auto;
-    margin: 58px 50px 20px 50px;
+    margin: 57px 50px 20px 50px;
   }
 }
 
@@ -245,6 +245,17 @@
   width: 100%;
   font-size: 18px;
   line-height: 20px;
+
+  &:hover,
+  &:focus {
+    color: @white;
+    background: #444444;
+    outline: none;
+  }
+
+  &:active {
+    color: @white-30;
+  }
 
   @media (min-width: @tablet-width) {
     grid-column: 1;

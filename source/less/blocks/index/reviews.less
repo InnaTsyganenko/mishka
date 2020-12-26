@@ -40,7 +40,7 @@
     height: 23px;
     width: 100%;
     background: url("../img/zigzag-line-desktop.svg") center no-repeat;
-    margin: 110px 0 13px 0;
+    margin: 111px 0 13px 0;
   }
 }
 
@@ -112,7 +112,7 @@
   color: @dark-grey;
   font-size: 15px;
   line-height: 30px;
-  margin: 16px 0 35px 0;
+  margin: 15px 0 35px 0;
 
   @media (min-width: @tablet-width) {
     margin: 20px 0 60px 0;
@@ -150,10 +150,13 @@
 .reviews__button-right {
   grid-column-start: 1;
   grid-column-end: 3;
-  margin: 26px 0 38px 0;
   width: 130px;
-  height: 52px;
   border: 1px solid @white-grey;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 0;
+  margin: 27px 0 38px 0;
 
   @media (min-width: @tablet-width) {
     grid-column: 2;
@@ -161,35 +164,54 @@
     align-self: end;
     border: none;
     justify-self: end;
-    margin: 0 0 53px 0;
+    margin: 0 0 61px 0;
     padding: 0;
+    width: 89px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 19px 63px 0;
+    width: 50px;
   }
 }
 
 .reviews__button-left {
   grid-column: 1;
   grid-row: 3;
-  background: transparent url("data:image/svg+xml,%3Csvg width='50' height='26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 11H7.7l8.1-8.2L13 0 0 13l13 13 2.8-2.8L7.7 15H50v-4z' fill='%23000'/%3E%3C/svg%3E") 2.8em center no-repeat;
-  border-right: none;
 
   @media (min-width: @tablet-width) {
     grid-column: 2;
     grid-row: 2;
     align-self: end;
-    margin-right: 63px;
+    margin-right: 86px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 106px;
   }
 }
 
 .reviews__button-right {
   grid-column: 2;
   grid-row: 3;
-  background: transparent url("data:image/svg+xml,%3Csvg width='50' height='26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 11h42.3l-8.1-8.2L37 0l13 13-13 13-2.8-2.8 8.1-8.2H0v-4z' fill='%23000'/%3E%3C/svg%3E") 2.8em center no-repeat;
 
   @media (min-width: @tablet-width) {
     grid-column: 2;
     grid-row: 2;
     align-self: end;
-    background-position: 4.6em center;
+  }
+}
+
+.reviews__button-icon {
+  fill: @black;
+
+  &:hover,
+  &:focus {
+    fill: @link-hover;
+  }
+
+  &:active {
+    fill: @link-down;
   }
 }
 

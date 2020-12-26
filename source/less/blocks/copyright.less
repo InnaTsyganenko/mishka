@@ -24,3 +24,16 @@
   margin-bottom: -10px;
   background: no-repeat;
 }
+
+.copyright__link-icon {
+  fill: @light-mint;
+
+  &:hover,
+  &:focus {
+    fill: @promo-link-right-active;
+  }
+
+  &:active {
+    fill: lighten(@promo-link-right-active, 30%);
+  }
+}
