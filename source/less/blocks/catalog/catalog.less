@@ -94,6 +94,15 @@
   align-items: start;
   border: 1px solid #ececec;
 
+  &:hover,
+  &:focus {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
+
   @media (min-width: @tablet-width) {
     grid-column: 2;
     grid-row: 1;
@@ -115,6 +124,15 @@
   color: @black;
   padding: 0;
   margin: 1.6em 1.6em 0.31em 1.6em;
+
+  &:hover,
+  &:focus {
+    color: @link-hover;
+  }
+
+  &:active {
+    color: @link-down;
+  }
 
   @media (min-width: @tablet-width) {
     position: relative;
@@ -186,8 +204,8 @@
   outline: none;
   width: 21px;
   height: 18px;
-  background: transparent url("../img/cart.svg") center center no-repeat;
   margin: 24px 25px 0 0;
+  background: transparent;
 
   @media (min-width: 768px) {
     align-self: end;
@@ -200,6 +218,19 @@
     justify-self: end;
     align-self: end;
     margin: 0 2.3em 2.2em 2em;
+  }
+}
+
+.catalog__cart-icon {
+  fill: @black-20;
+
+  &:hover,
+  &:focus {
+    fill: @light-mint;
+  }
+
+  &:active {
+    fill: @icon-down;
   }
 }
 
@@ -226,13 +257,11 @@
   @media (min-width: @tablet-width) {
     width: 334px;
     height: 334px;
-    content: url("../img/photo-1-tablet.jpg");
   }
 
   @media (min-width: @desktop-width) {
     width: 316px;
     height: 462px;
-    content: url("../img/photo-1-desktop.jpg");
   }
 }
 
@@ -240,13 +269,11 @@
   @media (min-width: @tablet-width) {
     width: 334px;
     height: 334px;
-    content: url("../img/photo-2-tablet.jpg");
   }
 
   @media (min-width: @desktop-width) {
     width: 316px;
     height: 462px;
-    content: url("../img/photo-2-desktop.jpg");
   }
 }
 
@@ -254,12 +281,10 @@
   @media (min-width: @tablet-width) {
     width: 334px;
     height: 334px;
-    content: url("../img/photo-3-tablet.jpg");
   }
 
   @media (min-width: @desktop-width) {
     width: 316px;
     height: 462px;
-    content: url("../img/photo-3-desktop.jpg");
   }
 }

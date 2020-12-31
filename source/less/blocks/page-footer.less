@@ -17,6 +17,7 @@
 
   @media (min-width: @tablet-width) {
     display: block;
+    cursor: pointer;
     padding: 0 0 15px 0;
   }
 }
@@ -25,5 +26,18 @@
   @media (min-width: @tablet-width) {
     align-self: center;
     padding-top: 5px;
+  }
+}
+
+.page-footer__img {
+  fill: @black;
+
+  &:hover,
+  &:focus {
+    fill: @promo-link-right-active;
+  }
+
+  &:active {
+    fill: lighten(@promo-link-right-active, 30%);
   }
 }

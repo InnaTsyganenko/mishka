@@ -21,6 +21,7 @@
     min-width: 1050px;
     grid-template-columns: 17% 22% 27.7% 8% 25.3%;
     grid-template-rows: min-content min-content;
+    margin: 0 50px;
     margin-bottom: -45px;
   }
 }
@@ -31,6 +32,7 @@
   justify-self: center;
   align-self: center;
   margin: 23px auto 16px auto;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     grid-column-start: 1;
@@ -44,21 +46,28 @@
   @media (min-width: @desktop-width) {
     grid-column: 3;
     grid-row: 1;
-    margin: 9px 0 10px 39px;
+    margin: 8px 0 10px 40px;
   }
 }
 
-.main-nav__img {
+.main-nav__logo-img {
   @media (min-width: @tablet-width) {
     width: 114px;
     height: 46px;
-    content: url("../img/mishka-logo-tablet.svg");
   }
 
   @media (min-width: @desktop-width) {
     width: 149px;
     height: 72px;
-    content: url("../img/mishka-logo-desktop.svg");
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -177,7 +186,7 @@
     grid-row: 1;
     align-self: center;
     font-size: 17px;
-    margin: -2px 0 2px 0;
+    margin: 0;
   }
 }
 
@@ -187,15 +196,26 @@
   display: inline-grid;
   min-height: 59px;
   box-shadow: 0 1px 0 @white-grey, inset 0 1px 0 @white-grey;
-  color: @black;
   padding: 10px;
   padding-left: 76px;
   align-items: center;
 }
 
 .main-nav__link,
-.main-nav__cart-link {
+.main-nav__cart-link,
+.main-nav__search-link,
+.main-nav__sale,
+.main-nav__new-arrivals {
   color: @black;
+
+  &:hover,
+  &:focus {
+    color: @link-hover;
+  }
+
+  &:active {
+    color: @link-down;
+  }
 }
 
 .main-nav__item,
@@ -229,7 +249,8 @@
 .main-nav__search-link {
   grid-column: 1;
   grid-row: 4;
-  background: url("data:image/svg+xml,%3Csvg width='18' height='19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='.2' d='M17.693 16.265l-3.477-3.492c1.023-1.335 1.534-2.979 1.534-4.725C15.75 3.632 12.273.14 7.875.14S0 3.632 0 8.048c0 4.417 3.477 7.909 7.875 7.909 1.739 0 3.375-.617 4.704-1.541l3.478 3.492c.204.205.409.308.818.308.614 0 1.125-.513 1.125-1.13 0-.205-.102-.513-.307-.821zM2.25 8.048C2.25 4.967 4.807 2.4 7.875 2.4S13.5 4.967 13.5 8.05c0 3.08-2.557 5.648-5.625 5.648S2.25 11.129 2.25 8.048z' fill='%23000'/%3E%3C/svg%3E") 30px center no-repeat;
+  position: relative;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     grid-column: 3;
@@ -249,13 +270,22 @@
     grid-row: 1;
     font-size: 0;
   }
+
+  &:hover .main-nav__search-link-icon,
+  &:focus .main-nav__search-link-icon {
+    fill: @light-mint;
+  }
+
+  &:active .main-nav__search-link-icon {
+    fill: @icon-down;
+  }
 }
 
 .main-nav__cart-list {
+  position: relative;
   grid-column: 1;
   grid-row: 5;
   border-bottom: 1px solid @white-grey;
-  background: url("data:image/svg+xml,%3Csvg width='21' height='19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='.2' d='M20.188 7.357h-3.55L13.188.853C12.985.47 12.58.375 12.174.566s-.507.574-.304.956l3.145 5.835H5.783l3.145-5.835c.202-.382 0-.765-.305-.956-.406-.191-.811 0-1.014.287l-3.45 6.504H.812c-.406 0-.812.286-.812.765 0 .382.304.765.812.765h.202l.914 2.869c-.203.096-.305.287-.305.574 0 .383.305.67.71.67l1.725 5.547h12.884l1.725-5.548c.405 0 .71-.287.71-.67 0-.19-.102-.477-.304-.573l.912-2.87h.203c.406 0 .812-.286.812-.764 0-.479-.406-.765-.812-.765zm-4.565 9.66H5.073l-1.218-4.113h13.087l-1.319 4.112zm1.623-5.548H3.348l-.812-2.678h15.522l-.812 2.678z' fill='%23000'/%3E%3C/svg%3E") 30px center no-repeat;
 
   @media (min-width: @tablet-width) {
     grid-column: 4;
@@ -273,7 +303,37 @@
     justify-self: end;
     align-self: center;
     border-bottom: none;
-    margin-right: 3px;
+    margin-right: 2px;
+  }
+
+  &:hover .main-nav__cart-link-icon,
+  &:focus .main-nav__cart-link-icon {
+    fill: @light-mint;
+  }
+
+  &:active .main-nav__cart-link-icon {
+    fill: @icon-down;
+  }
+}
+
+.main-nav__search-link-icon,
+.main-nav__cart-link-icon {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  fill: @black-20;
+}
+
+.main-nav__search-link-icon {
+  @media (min-width: @tablet-width) {
+    top: 35px;
+  }
+}
+
+.main-nav__cart-link-icon {
+  @media (min-width: @tablet-width) {
+    top: 20px;
+    left: 3px;
   }
 }
 
@@ -296,7 +356,7 @@
     display: inline-grid;
     font-size: 15px;
     color: @black;
-    padding: 19px 0 0 40px;
+    padding: 19px 0 0 41px;
     grid-column: 2;
     grid-row: 2;
   }

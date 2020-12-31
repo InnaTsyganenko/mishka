@@ -8,6 +8,7 @@
 
 .radio-button__label {
   position: relative;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     margin: 0;
@@ -19,7 +20,7 @@
 }
 
 .radio-button__input + .radio-button__label::before,
-.radio-button__input:not(:disabled):not(:checked) + .radio-button__label:hover::before,
+.radio-button__input:not(:disabled):not(:checked) + .radio-button__label::before,
 .radio-button__input:focus:not(:checked) + .radio-button__label::before {
   display: inline-grid;
   content: "";
@@ -38,6 +39,16 @@
   @media (min-width: @desktop-width) {
     margin-right: 35px;
   }
+}
+
+.radio-button__input + .radio-button__label:hover::before,
+.radio-button__input:not(:disabled):not(:checked) + .radio-button__label:hover::before,
+.radio-button__input:not(:checked) + .radio-button__label:hover::before {
+  border: 2px solid @lighter-mint;
+}
+
+.radio-button__input + .radio-button__label:active::before {
+  border: 2px solid @black-30;
 }
 
 .radio-button__input:checked + .radio-button__label::after {

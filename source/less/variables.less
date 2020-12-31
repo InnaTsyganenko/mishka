@@ -15,9 +15,24 @@
 @light-grey:rgba(198, 198, 198, 1); /* C6C6C6 обводка модал */
 @lighter-mint: rgba(98, 209, 186, 1); /* 62D1BA для подчёркивания e-mail */
 
-/* hover */
+/* hover, focus, active */
 
 @link-hover: lighten(@black, 60%);
+@link-down: lighten(@black, 70%);
+
+@icon-hover: @light-mint;
+@icon-down:  lighten(@light-mint, 30%);
+
+@promo-link-left-active: rgba(89, 213, 188, 1);
+@promo-link-right-active: rgba(70, 193, 174, 1);
+
+@promo-link-icon: rgba(20, 144, 128, 0.5);
+@promo-link-icon-hover: rgba(20, 144, 128, 0.7);
+@promo-link-icon-down: rgba(20, 144, 128, 0.3);
+
+@white-30: rgba(255, 255, 255, 0.3);
+
+@email-link-hover: @promo-link-right-active;
 
 /* media */
 
