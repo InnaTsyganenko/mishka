@@ -79,6 +79,7 @@
   border: none;
   background: none;
   outline: none;
+  padding: 0 0 10px;
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -87,7 +88,8 @@
 
 /* .main-nav__mobile-menu--closed  */
 
-.main-nav__mobile-menu--closed .main-nav__toggle {
+.main-nav__mobile-menu--closed .main-nav__toggle::before {
+  display: block;
   content: "";
   width: 20px;
   height: 2px;
@@ -112,7 +114,7 @@
   content: "";
   position: absolute;
   top: 5px;
-  left: -10px;
+  left: -23px;
   width: 27px;
   height: 2px;
   background-color: @black;
