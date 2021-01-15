@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="icon" href="img/favicon.svg" sizes="any" type="image/svg+xml">
+    <link rel="icon" href="img/favicon.png" sizes="12x16" type="image/png">
+    <link rel="icon" href="img/favicon2.png" sizes="24x32" type="image/png">
     <link rel="icon" href="img/favicon.webp" type="image/x-icon">
     <title>Мишка - милые штуки ручной работы</title>
   </head>
@@ -17,7 +20,7 @@
             <img class="main-nav__logo-img" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип интернет-магазина «Мишка»">
           </picture>
         </a>
-        <div class="main-nav__mobile-menu main-nav__mobile-menu--closed main-nav__mobile-menu--nojs">
+        <div class="main-nav__mobile-menu main-nav__mobile-menu--nojs">
           <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <div class="main-nav__mobile-menu-wrapper">
             <ul class="main-nav__list">
@@ -78,11 +81,11 @@
             <dd class="promoted-product__characteristic-description">15 см</dd>
           </dl>
           <picture class="promoted-product__img-container">
-            <source type="image/webp" media="(min-width: 1200px)" srcset="img/triple-set-desktop.webp 1x, img/triple-set-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1150px)" srcset="img/triple-set-desktop.webp 1x, img/triple-set-desktop@2x.webp 2x">
             <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet.webp 1x, img/triple-set-tablet@2x.webp 2x">
             <source type="image/webp" srcset="img/triple-set-mobile.webp 1x, img/triple-set-mobile@2x.webp 2x">
-            <source class="promoted-product__img" media="(min-width: 1150px)" srcset="img/triple-set-desktop.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
-            <source class="promoted-product__img" media="(min-width: 768px)" srcset="img/triple-set-tablet.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+            <source media="(min-width: 1150px)" srcset="img/triple-set-desktop.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/triple-set-tablet.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
             <img class="promoted-product__img" src="img/triple-set-mobile.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" width="260" height="315" alt="Фото товара: три вязаные корзинки в руках">
           </picture>
           <p class="promoted-product__price">Цена: 990 руб.</p>
@@ -187,13 +190,13 @@
       </div>
     </footer>
     <section class="modal">
-      <h2 class="modal__title">Добавить в корзину</h2>
+      <h2 class="modal__title">Добавить&thinsp;в&nbsp;корзину</h2>
       <p class="modal__text">Выберите размер:</p>
       <form class="modal__form" method="POST" action="https://echo.htmlacademy.ru/">
         <div class="modal__form-container">
-          <input class="modal__input-size" id="input-size-s" type="radio" name="input-size" value="input-size-s">
+          <input class="modal__input-size" id="input-size-s" type="radio" name="input-size" value="input-size-s" checked>
           <label class="modal__label-size" for="input-size-s">S</label>
-          <input class="modal__input-size" id="input-size-m" type="radio" name="input-size" value="input-size-m" checked>
+          <input class="modal__input-size" id="input-size-m" type="radio" name="input-size" value="input-size-m">
           <label class="modal__label-size" for="input-size-m">M</label>
           <input class="modal__input-size" id="input-size-l" type="radio" name="input-size" value="input-size-l">
           <label class="modal__label-size" for="input-size-l">L</label>
@@ -201,21 +204,17 @@
         <button class="modal__add-button button" type="button">Добавить</button>
       </form>
     </section>
-    <div class="modal-overlay"></div>
     <script>
       var navMob = document.querySelector('.main-nav__mobile-menu');
       var navToggle = document.querySelector('.main-nav__toggle');
       navMob.classList.remove('main-nav__mobile-menu--nojs');
+      navMob.classList.add('main-nav__mobile-menu--closed');
       navToggle.addEventListener('click', function() {
-        if (navMob.classList.contains('main-nav__mobile-menu--closed')) {
-          navMob.classList.remove('main-nav__mobile-menu--closed');
-          navMob.classList.add('main-nav__mobile-menu--opened');
-        } else {
-          navMob.classList.add('main-nav__mobile-menu--closed');
-          navMob.classList.remove('main-nav__mobile-menu--opened');
-        }
+        navMob.classList.toggle('main-nav__mobile-menu--closed');
+        navMob.classList.toggle('main-nav__mobile-menu--opened');
       });
     </script>
-    <script src="js/modal.js"></script>
+    <div class="modal-overlay"></div>
+    <script src="js/modal.min.js"></script>
   </body>
 </html>
