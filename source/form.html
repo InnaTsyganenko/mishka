@@ -17,7 +17,7 @@
             <img class="main-nav__logo-img" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип интернет-магазина «Мишка»">
           </picture>
         </a>
-        <div class="main-nav__mobile-menu main-nav__mobile-menu--closed main-nav__mobile-menu--nojs">
+        <div class="main-nav__mobile-menu main-nav__mobile-menu--nojs">
           <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <div class="main-nav__mobile-menu-wrapper">
             <ul class="main-nav__list">
@@ -196,14 +196,10 @@
       var navMob = document.querySelector('.main-nav__mobile-menu');
       var navToggle = document.querySelector('.main-nav__toggle');
       navMob.classList.remove('main-nav__mobile-menu--nojs');
+      navMob.classList.add('main-nav__mobile-menu--closed');
       navToggle.addEventListener('click', function() {
-        if (navMob.classList.contains('main-nav__mobile-menu--closed')) {
-          navMob.classList.remove('main-nav__mobile-menu--closed');
-          navMob.classList.add('main-nav__mobile-menu--opened');
-        } else {
-          navMob.classList.add('main-nav__mobile-menu--closed');
-          navMob.classList.remove('main-nav__mobile-menu--opened');
-        }
+        navMob.classList.toggle('main-nav__mobile-menu--closed');
+        navMob.classList.toggle('main-nav__mobile-menu--opened');
       });
     </script>
   </body>
