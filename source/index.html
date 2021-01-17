@@ -204,17 +204,8 @@
         <button class="modal__add-button button" type="button">Добавить</button>
       </form>
     </section>
-    <script>
-      var navMob = document.querySelector('.main-nav__mobile-menu');
-      var navToggle = document.querySelector('.main-nav__toggle');
-      navMob.classList.remove('main-nav__mobile-menu--nojs');
-      navMob.classList.add('main-nav__mobile-menu--closed');
-      navToggle.addEventListener('click', function() {
-        navMob.classList.toggle('main-nav__mobile-menu--closed');
-        navMob.classList.toggle('main-nav__mobile-menu--opened');
-      });
-    </script>
     <div class="modal-overlay"></div>
+    <script src="js/mobile-menu.min.js"></script>
     <script src="js/modal.min.js"></script>
   </body>
 </html>
