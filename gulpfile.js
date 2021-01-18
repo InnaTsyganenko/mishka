@@ -14,6 +14,14 @@ const svgstore = require("gulp-svgstore");
 const del = require("del");
 const sync = require("browser-sync").create();
 
+// HTML
+
+const html = () => {
+  return gulp.src("source/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest("build"));
+}
+
 // Styles
 
 const styles = () => {
@@ -33,20 +41,12 @@ const styles = () => {
 
 exports.styles = styles;
 
-// HTML
-
-const html = () => {
-  return gulp.src("source/*.html")
-    .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest("build"));
-}
-
 // Scripts
 
 const scripts = () => {
-  return gulp.src("source/js/modal.js")
+  return gulp.src("source/js/*.js")
     .pipe(uglify())
-    .pipe(rename("modal.min.js"))
+    .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest("build/js"))
     .pipe(sync.stream());
 }
