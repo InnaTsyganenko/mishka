@@ -15,6 +15,12 @@
     border: 2px solid @lighter-mint;
   }
 
+  &:hover::placeholder,
+  &:focus::placeholder,
+  &:active::placeholder {
+    transform: scale(0);
+  }
+
   @media (min-width: @tablet-width) {
     padding: 16px 15px;
     font-size: 19px;

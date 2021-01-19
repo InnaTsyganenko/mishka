@@ -1,5 +1,5 @@
 .promo {
-  background: url("../img/hero-mobile.jpg") no-repeat center -17px;
+  background: url("../img/hero-mobile.jpg") no-repeat;
 
   @media (min-resolution: 2dppx) {
     background: url("../img/hero-mobile@2x.jpg");
@@ -26,17 +26,11 @@
   }
 }
 
-.promo__wrapper {
-  @media (min-width: @tablet-width) {
-    margin: 0 50px;
-  }
-}
-
 .promo__caption {
   text-align: center;
   font-size: 27px;
   line-height: 30px;
-  padding: 73px 31px 120px 30px;
+  padding: 73px 30px 120px 30px;
   margin: 0;
 
   @media (min-width: @tablet-width) {
@@ -65,9 +59,9 @@
     line-height: 30px;
     min-width: 668px;
     list-style: none;
-    margin: 0;
     padding: 0;
     z-index: 0;
+    margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
@@ -75,7 +69,6 @@
     flex-wrap: wrap;
     min-width: 1050px;
     list-style: none;
-    margin: 0;
     padding: 0;
   }
 }
