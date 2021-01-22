@@ -8,7 +8,7 @@
 
 .form__fieldset {
   border: none;
-  border-top: 1px solid @lighter-mint;
+  border-top: 1px solid @decoration-color-1;
   padding: 0;
   margin: 10px 0;
 
@@ -27,11 +27,20 @@
   }
 }
 
+.form__fieldset-add {
+  border: none;
+  margin-bottom: 10px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 35px;
+  }
+}
+
 .form__legend {
   font-weight: 700;
   line-height: 16px;
   text-transform: uppercase;
-  color: @light-mint;
+  color: @decoration-color-4;
   padding: 0 23px 0 0;
 
   @media (min-width: @tablet-width) {
@@ -98,8 +107,6 @@
 }
 
 .form__fieldset-add .form__legend {
-  padding-right: 21px;
-
   @media (min-width: @tablet-width) {
     margin-top: 60px;
   }
@@ -109,9 +116,23 @@
   }
 }
 
+.form__fieldset-add .form__legend::after {
+  display: inline-block;
+  float: right;
+  content: "";
+  width: 200px;
+  height: 1px;
+  background: linear-gradient(transparent 5%, @decoration-color-1 5%);
+  margin-top: -13px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
 .form__bgcolor-box {
   @media (min-width: @tablet-width) {
-    background-color: @lighter-grey;
+    background-color: @bg-color-tint;
   }
 }
 
@@ -196,10 +217,10 @@
 .form__input {
   font-family: "Open Sans", "Arial", sans-serif;
   border: none;
-  border-bottom: 2px solid @black;
-  padding: 16px 0;
+  border-bottom: 2px solid @color-text-caption;
+  padding: 15px 0;
   font-size: 17px;
-  line-height: 18px;
+  line-height: 20px;
   width: 100%;
   background-color: inherit;
   outline: none;
@@ -207,11 +228,18 @@
 
   &:hover,
   &:focus {
-    border-bottom: 2px solid @lighter-mint;
+    border-bottom: 2px solid @decoration-color-1;
   }
 
   &:active {
-    color: @dark-grey;
+    color: @decoration-color-2;
+  }
+
+  &:hover::placeholder,
+  &:focus::placeholder,
+  &:active::placeholder {
+    transform: scale(0);
+    opacity: 0;
   }
 
   @media (min-width: @tablet-width) {
@@ -236,14 +264,14 @@
 .form__required-text {
   font-size: 14px;
   line-height: 16px;
-  color: @dark-grey;
+  color: @decoration-color-2;
   margin: 12px 0 15px 0;
 
   @media (min-width: @tablet-width) {
     text-align: right;
     font-size: 17px;
     line-height: 30px;
-    margin: 10px 50px 0 0;
+    margin: 18px 50px 0 0;
     float: right;
   }
 
@@ -261,7 +289,7 @@
 
   @media (min-width: @tablet-width) {
     width: 230px;
-    margin: 0 0 50px 50px;
+    margin: 17px 0 50px 50px;
     padding: 16px;
   }
 

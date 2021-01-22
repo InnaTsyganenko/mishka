@@ -25,7 +25,7 @@
   margin: 31px 30px;
 
   @media (min-width: @tablet-width) {
-    margin: 40px 50px;
+    margin: 42px 50px;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: auto auto auto auto auto;
@@ -37,7 +37,7 @@
     display: grid;
     grid-template-columns: 16.7% 33.3% 50%;
     grid-template-rows: auto auto auto auto auto;
-    margin: 60px 50px 20px 50px;
+    margin: 62px 50px 20px 50px;
   }
 }
 
@@ -69,7 +69,7 @@
 .promoted-product__feuture {
   line-height: 20px;
   text-transform: uppercase;
-  color: @light-mint;
+  color: @decoration-color-4;
   font-weight: 700;
   margin: 4px 0 17px 0;
 
@@ -93,7 +93,7 @@
 
 .promoted-product__description {
   font-size: 15px;
-  color: @dark-grey;
+  color: @decoration-color-2;
 
   @media (min-width: @tablet-width) {
     grid-column-start: 1;
@@ -117,11 +117,12 @@
   grid-template-rows: auto auto auto;
   font-size: 15px;
   line-height: 20px;
-  color: @dark-grey;
+  color: @decoration-color-2;
   margin: 22px 0 27px 0;
 
   @media (min-width: @tablet-width) {
-    grid-template-columns: 97px 197px;
+    width: 294px;
+    grid-template-columns: 33% 67%;
     grid-template-rows: auto auto auto;
     grid-column-start: 1;
     grid-column-end: 3;
@@ -139,7 +140,7 @@
 .promoted-product__characteristic-term,
 .promoted-product__characteristic-description {
   padding: 6px 0 13px 0;
-  border-bottom: 1px solid @white-grey;
+  border-bottom: 1px solid @border-1;
   margin: 0;
 }
 
@@ -222,9 +223,9 @@
 
 .promoted-product__price {
   font-weight: 700;
-  color: @dark-grey;
+  color: @decoration-color-2;
   text-align: center;
-  margin: 21px 0 23px 0;
+  margin: 21px 0 25px 0;
 
   @media (min-width: @tablet-width) {
     grid-column-start: 1;
@@ -243,14 +244,13 @@
 }
 
 .promoted-product__button-order {
-  width: 100%;
   font-size: 18px;
   line-height: 20px;
 
   @media (min-width: @tablet-width) {
+    width: 260px;
     grid-column: 1;
     grid-row: 5;
-    min-width: 292px;
     font-size: 17px;
     margin-top: 3px;
   }
@@ -258,7 +258,6 @@
   @media (min-width: @desktop-width) {
     grid-column: 2;
     grid-row: 5;
-    width: 292px;
     margin-top: 0;
   }
 }

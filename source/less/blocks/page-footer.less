@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   justify-content: center;
   padding: 25px;
-  background-color: @lighter-grey;
+  background-color: @bg-color-tint;
 
   @media (min-width: @tablet-width) {
     padding: 47px 50px 29px 50px;
@@ -14,23 +14,24 @@
 
 .page-footer__logo {
   display: none;
+  outline: none;
 
   @media (min-width: @tablet-width) {
     display: block;
     cursor: pointer;
     padding: 0 0 15px 0;
   }
-}
 
-.page-footer__img {
-  fill: @black;
-
-  &:hover,
-  &:focus {
+  &:hover .page-footer__img,
+  &:focus .page-footer__img {
     fill: @promo-link-right-active;
   }
 
-  &:active {
-    fill: lighten(@promo-link-right-active, 30%);
+  &:active .page-footer__img {
+    fill: rgba(@promo-link-right-active, 0.3);
   }
+}
+
+.page-footer__img {
+  fill: @color-text-caption;
 }

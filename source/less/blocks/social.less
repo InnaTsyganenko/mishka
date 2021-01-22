@@ -1,6 +1,6 @@
 .social {
   width: 100%;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid rgba(229, 229, 229, 1);
   justify-self: center;
 
   @media (min-width: @tablet-width) {
@@ -22,15 +22,19 @@
   list-style: none;
 }
 
-.social__link-icon {
-  fill: @dark-grey;
+.social__link {
+  outline: none;
 
-  &:hover,
-  &:focus {
+  &:hover .social__link-icon,
+  &:focus .social__link-icon {
     fill: @promo-link-right-active;
   }
 
-  &:active {
-    fill: lighten(@promo-link-right-active, 30%);
+  &:active .social__link-icon {
+    fill: rgba(@promo-link-right-active, 0.3);
   }
+}
+
+.social__link-icon {
+  fill: @decoration-color-2;
 }

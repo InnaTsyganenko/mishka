@@ -7,7 +7,6 @@
   height: 100%;
   z-index: 90;
   background: rgba(255, 255, 255, 0.9);
-  box-sizing: border-box;
 }
 
 .modal {
@@ -16,17 +15,16 @@
   left: 0;
   right: 0;
   bottom: auto;
-  margin: 10% 20%;
+  margin: 20% 0;
   display: none;
   z-index: 100;
   min-width: 320px;
   height: 336px;
-  border: 1px solid @light-grey;
+  border: 1px solid rgba(198, 198, 198, 1);
   box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
-  background: @white;
+  background: @bg-color-page;
 
   @media (min-width: @tablet-width) {
-    width: 73%;
     max-width: 566px;
     left: 0;
     right: 0;
@@ -64,7 +62,7 @@
 .modal__text {
   font-size: 15px;
   line-height: 30px;
-  color: @dark-grey;
+  color: @decoration-color-2;
   text-align: center;
 
   @media (min-width: @tablet-width) {
@@ -101,23 +99,27 @@
   align-items: center;
   font-weight: 700;
   line-height: 16px;
-  color: @dark-grey;
-  border: 2px solid @black-10;
+  color: @decoration-color-2;
+  border: 2px solid rgba(@decoration-color-2, 0.1);
   padding: 10px;
   margin-right: 7px;
-
-  &:hover,
-  &:focus {
-    border: 2px solid lighten(@dark-grey, 30%);
-  }
 
   @media (min-width: @tablet-width) {
     width: 188px;
   }
 }
 
+.modal__input-size:hover + .modal__label-size,
+.modal__input-size:focus + .modal__label-size {
+  border: 2px solid rgba(@decoration-color-2, 0.3);
+}
+
 .modal__input-size:checked + .modal__label-size {
-  border: 2px solid @light-mint;
+  border: 2px solid @decoration-color-4;
+}
+
+.modal__input-size:disabled + .modal__label-size {
+  border: 2px solid rgba(180, 180, 180, 0.1);
 }
 
 .modal__label-size:last-child {
@@ -125,8 +127,8 @@
 }
 
 .modal__add-button {
-  background-color: @light-mint;
-  color: @white;
+  background-color: @decoration-color-4;
+  color: white;
   width: 100%;
   min-height: 52px;
   border: none;

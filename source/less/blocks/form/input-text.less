@@ -4,7 +4,7 @@
 
 .input-text__item {
   display: grid;
-  margin-bottom: 23px;
+  margin-bottom: 22px;
 
   @media (min-width: @tablet-width) {
     display: grid;
@@ -30,7 +30,6 @@
 }
 
 .input-text__input {
-  padding: 16px 17px 15px 0;
   box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
@@ -47,7 +46,6 @@
 
 .input-text__tel {
   margin: 4px 0 21px 0;
-  padding: 16px 45px 16px 0;
   box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
@@ -64,12 +62,12 @@
   &:hover ~ .input-text__tel-icon,
   &:focus ~ .input-text__tel-icon,
   &:active ~ .input-text__tel-icon {
-    fill: @lighter-mint;
+    fill: @decoration-color-1;
   }
 }
 
 .input-text__tel-icon {
-  fill: @black-20;
+  fill: @icon;
   position: absolute;
   right: 8px;
   top: 15px;
@@ -105,12 +103,12 @@
   &:hover ~ .input-text__email-icon,
   &:focus ~ .input-text__email-icon,
   &:active ~ .input-text__email-icon {
-    fill: @lighter-mint;
+    fill: @decoration-color-1;
   }
 }
 
 .input-text__email-icon {
-  fill: @black-20;
+  fill: @icon;
   position: absolute;
   right: 3px;
   top: 20px;
@@ -118,12 +116,12 @@
   width: 32px;
   height: 21px;
 
-  @media (min-width: 768px) {
+  @media (min-width: @tablet-width) {
     right: 22px;
     top: 25px;
   }
 
-  @media (min-width: 1150px) {
+  @media (min-width: @desktop-width) {
     right: 5px;
     top: 8px;
   }
