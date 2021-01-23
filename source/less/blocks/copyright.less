@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin-top: 22px;
+  margin-top: 23px;
 
   @media (min-width: @tablet-width) {
     padding: 0 0 30px 0;
@@ -23,17 +23,18 @@
 .copyright__link {
   margin-bottom: -10px;
   background: no-repeat;
-}
+  outline: none;
 
-.copyright__link-icon {
-  fill: @light-mint;
-
-  &:hover,
-  &:focus {
+  &:hover .copyright__link-icon,
+  &:focus .copyright__link-icon {
     fill: @promo-link-right-active;
   }
 
-  &:active {
-    fill: lighten(@promo-link-right-active, 30%);
+  &:active .copyright__link-icon {
+    fill: rgba(@promo-link-right-active, 0.3);
   }
+}
+
+.copyright__link-icon {
+  fill: @decoration-color-4;
 }

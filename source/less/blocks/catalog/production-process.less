@@ -1,14 +1,14 @@
 .production-process {
   margin: 30px 0 57px 0;
-  border: 1px solid @white-grey;
+  border: 1px solid @border-1;
 
   &:hover,
   &:focus {
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 10px @border-2;
   }
 
   &:active {
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 5px @border-2;
   }
 
   @media (min-width: @tablet-width) {
@@ -22,7 +22,7 @@
     display: grid;
     grid-template-columns: 65% 35%;
     grid-template-rows: auto auto auto;
-    margin: 0.2em 0 6em 0;
+    margin: 0.2em 0 6.1em 0;
   }
 }
 
@@ -30,11 +30,11 @@
   position: relative;
   font-size: 17px;
   line-height: 24px;
-  margin: 21px 13px 26px 90px;
+  margin: 23px 13px 26px 90px;
 
   @media (min-width: @tablet-width) {
     order: 1;
-    margin: 2em 1em 1em 5.32em;
+    margin: 2.1em 1em 1em 5.32em;
     font-size: 20px;
   }
 
@@ -87,22 +87,28 @@
   }
 }
 
-.production-process__play {
+.production-process__button-play {
   position: absolute;
   display: grid;
   align-self: center;
   justify-self: center;
-  fill: @light-mint;
+  outline: none;
+  border: none;
+  background: none;
 
-  &:hover,
-  &:focus {
+  &:hover .production-process__img-play,
+  &:focus .production-process__img-play {
     transform: scale(1.2);
   }
 
-  &:active {
+  &:active .production-process__img-play {
     transform: scale(0.8);
     fill: @icon-down;
   }
+}
+
+.production-process__img-play {
+  fill: @decoration-color-4;
 }
 
 .production-process__poster {
@@ -111,7 +117,7 @@
     height: 455px;
   }
 
-  @media (min-width: 1150px) {
+  @media (min-width: @desktop-width) {
     width: 683px;
   }
 }
@@ -119,7 +125,7 @@
 .production-process__text {
   font-size: 13px;
   line-height: 24px;
-  color: @dark-grey;
+  color: @decoration-color-2;
   margin: 35px 0 0 33px;
 
   @media (min-width: @tablet-width) {

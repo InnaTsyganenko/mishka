@@ -6,20 +6,21 @@
   padding: 14px;
   font-weight: bold;
   font-family: "Open Sans", "Arial", sans-serif;
-  color: @dark-grey;
-  background-color: @white;
-  border: 2px solid @dark-grey;
+  color: @decoration-color-2;
+  background-color: @bg-color-page;
+  border: 2px solid @decoration-color-2;
   text-transform: uppercase;
   cursor: pointer;
+  text-align: center;
 
   &:hover,
   &:focus {
-    color: @white;
-    background: #444444;
+    color: @bg-color-page;
+    background: @decoration-color-2;
     outline: none;
   }
 
   &:active {
-    color: @white-30;
+    color: rgba(@bg-color-page, 0.3);
   }
 }
