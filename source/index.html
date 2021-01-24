@@ -14,7 +14,7 @@
     <title>Мишка - милые штуки ручной работы</title>
   </head>
   <body class="page__body">
-    <header class="page-header">
+    <header class="page__header">
       <nav class="main-nav">
         <a class="main-nav__logo" aria-label="Ссылка на главную страницу интернет-магазина Мишка">
           <picture>
@@ -55,7 +55,7 @@
         </div>
       </nav>
     </header>
-    <main class="page-main">
+    <main class="page__main">
       <h1 class="visually-hidden">Интернет-магазин «Мишка» - вещи ручной работы для дома</h1>
       <section class="promo">
         <h2 class="promo__caption">Милые штуки <strong>ручной</strong>&thinsp;<br>работы для дома</h2>
@@ -129,14 +129,14 @@
         </div>
       </section>
     </main>
-    <footer class="page-footer">
+    <footer class="page__footer page-footer">
       <section class="contacts">
         <div class="contacts__container">
           <h2 class="contacts__title">Контакты</h2>
           <dl class="contacts__list">
             <dt class="contacts__term">e-mail:</dt>
             <dd class="contacts__description contacts__e-mail">
-              <a class="contacts__email-link" href="#" aria-label="Наш адрес электронной почты">info@mimimishkashop.ru"</a>
+              <a class="contacts__email-link" href="#" aria-label="Наш адрес электронной почты">info@mimimishkashop.ru</a>
             </dd>
             <dt class="contacts__term">адрес:</dt>
             <dd class="contacts__description">г. Санкт-Петербург<br> ул. Большая Конюшенная<br> д. 19/8, офис 101</dd>
@@ -147,44 +147,46 @@
           <a class="contacts__write-us-button button" href="#">Напишите нам</a>
         </div>
       </section>
-      <div class="page-footer__container">
-        <a class="page-footer__logo" href="#" aria-label="Логотип интернет-магазина «Мишка»">
-          <svg class="page-footer__img" width="102" height="34" role="img" aria-hidden="true">
-            <use xlink:href="img/sprite.svg#icon-logo-footer"></use>
-          </svg>
-        </a>
-        <div class="social">
-          <ul class="social__list">
-            <li class="social__item">
-              <a class="social__link" href="#" aria-label="Мы в Instagram">
-                <svg class="social__link-icon" width="23" height="22" role="img" aria-hidden="true">
-                  <use xlink:href="img/sprite.svg#icon-insta"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link" href="#" aria-label="Мы в Facebook">
-                <svg class="social__link-icon" width="16" height="30" role="img" aria-hidden="true">
-                  <use xlink:href="img/sprite.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link" href="#" aria-label="Мы в Twitter">
-                <svg class="social__link-icon" width="25" height="20" role="img" aria-hidden="true">
-                  <use xlink:href="img/sprite.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="copyright">
-          <b class="copyright__text">Разработано</b>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="blank" aria-label="Иконка-ссылка на интенсив HTML Academy">
-            <svg class="copyright__link-icon" width="27" height="35" role="img" aria-hidden="true">
-              <use xlink:href="img/sprite.svg#icon-logo-htmlacademy"></use>
+      <div class="page-footer__wrapper">
+        <div class="page-footer__container">
+          <a class="page-footer__logo" href="#" aria-label="Логотип интернет-магазина «Мишка»">
+            <svg class="page-footer__img" width="102" height="34" role="img" aria-hidden="true">
+              <use xlink:href="img/sprite.svg#icon-logo-footer"></use>
             </svg>
           </a>
+          <div class="social">
+            <ul class="social__list">
+              <li class="social__item">
+                <a class="social__link" href="#" aria-label="Мы в Instagram">
+                  <svg class="social__link-icon" width="23" height="22" role="img" aria-hidden="true">
+                    <use xlink:href="img/sprite.svg#icon-insta"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="#" aria-label="Мы в Facebook">
+                  <svg class="social__link-icon" width="16" height="30" role="img" aria-hidden="true">
+                    <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="#" aria-label="Мы в Twitter">
+                  <svg class="social__link-icon" width="25" height="20" role="img" aria-hidden="true">
+                    <use xlink:href="img/sprite.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="copyright">
+            <b class="copyright__text">Разработано</b>
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="blank" aria-label="Иконка-ссылка на интенсив HTML Academy">
+              <svg class="copyright__link-icon" width="27" height="35" role="img" aria-hidden="true">
+                <use xlink:href="img/sprite.svg#icon-logo-htmlacademy"></use>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </footer>
@@ -203,7 +205,7 @@
         <button class="modal__add-button button" type="button">Добавить</button>
       </form>
     </section>
-    <div class="modal-overlay"></div>
+    <div class="page__overlay"></div>
     <script src="js/mobile-menu.min.js"></script>
     <script src="js/modal.min.js"></script>
   </body>

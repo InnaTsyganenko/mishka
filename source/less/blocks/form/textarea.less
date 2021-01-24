@@ -7,7 +7,7 @@
   min-height: 105px;
   color: @color-text-caption;
   border: 2px solid @decoration-color-2;
-  margin: 15px 0 0 0;
+  margin: 15px 0 0;
   outline: none;
 
   &:hover,
@@ -35,11 +35,12 @@
     font-size: 19px;
     line-height: 18px;
     margin: 41px 0 38px 20px;
-    width: 467px;
+    min-width: 467px;
   }
 
   @media (min-width: @desktop-width) {
     margin: 21px 0 13px 20px;
     min-width: 667px;
+    max-width: 768px;
   }
 }

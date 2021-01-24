@@ -1,14 +1,25 @@
+.page-footer__wrapper {
+  width: 100%;
+  background-color: @bg-color-tint;
+}
+
 .page-footer__container {
+  width: 320px;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 25px;
-  background-color: @bg-color-tint;
+  padding: 25px 0;
 
   @media (min-width: @tablet-width) {
+    width: 668px;
     padding: 47px 50px 29px 50px;
     align-items: center;
     justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1050px;
   }
 }
 
