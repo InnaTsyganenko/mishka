@@ -262,6 +262,13 @@
   }
 }
 
+.form__container {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  width: 950px;
+  margin: 0 auto;
+}
+
 .form__required-text {
   font-size: 14px;
   line-height: 16px;
@@ -278,8 +285,9 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 40%;
-    margin: 12px 225px;
+    width: 100%;
+    margin: 12px;
+    text-align: center;
   }
 }
 
@@ -297,6 +305,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 225px;
+    margin-left: 125px;
+    margin-top: 0;
   }
 }
