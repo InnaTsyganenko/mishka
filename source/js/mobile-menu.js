@@ -1,5 +1,5 @@
-let navMob = document.querySelector('.main-nav__mobile-menu');
-let navToggle = document.querySelector('.main-nav__toggle');
+const navMob = document.querySelector('.main-nav__mobile-menu');
+const navToggle = document.querySelector('.main-nav__toggle');
 
   navMob.classList.remove('main-nav__mobile-menu--nojs');
   navMob.classList.add('main-nav__mobile-menu--closed');
